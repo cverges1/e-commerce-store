@@ -5,12 +5,37 @@ const Merchant = require("./merchant");
 const Payment = require("./payment");
 const Transaction = require("./transaction");
 const Delivery = require("./delivery");
+const Order = require("./order");
 
 User.hasMany(Product, {
   foreignKey: "userId",
 });
 
 Product.belongsTo(User, {
+  foreignKey: "userId",
+});
+
+User.hasMany(Payment, {
+  foreignKey: "userId",
+});
+
+Payment.belongsTo(User, {
+  foreignKey: "userId",
+});
+
+User.hasMany(Order, {
+  foreignKey: "userId",
+});
+
+Order.belongsTo(User, {
+  foreignKey: "userId",
+});
+
+User.hasMany(Transaction, {
+  foreignKey: "userId",
+});
+
+Transaction.belongsTo(User, {
   foreignKey: "userId",
 });
 
@@ -32,21 +57,38 @@ Product.belongsTo(Merchant, {
   foreignKey: "merchantId",
 });
 
-User.hasMany(Transaction, {
-  foreignKey: "userId",
+Order.hasMany(Product, {
+  foreignKey: "orderId",
+  onDelete: "CASCADE",
 });
 
-Transaction.belongsTo(User, {
-  foreignKey: "userId",
+Product.belongsTo(Order, {
+  foreignKey: "orderId",
 });
 
-Payment.hasOne(Transaction, {
+Transaction.hasOne(Payment, {
   foreignKey: "paymentId",
 });
 
-Transaction.belongsTo(Payment, {
+Payment.belongsTo(Transaction, {
   foreignKey: "paymentId",
 });
+
+Transaction.hasOne(Order, {
+  foreignKey: "orderId",
+});
+
+Order.belongsTo(Transaction, {
+  foreignKey: "orderId",
+});
+
+Transaction.hasOne(Delivery, {
+    foreignKey: "deliveryId",
+  });
+  
+  Delivery.belongsTo(Transaction, {
+    foreignKey: "deliveryId",
+  });
 
 module.exports = {
   User,
@@ -56,4 +98,5 @@ module.exports = {
   Payment,
   Transaction,
   Delivery,
+  Order,
 };

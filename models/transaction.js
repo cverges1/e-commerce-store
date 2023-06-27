@@ -10,6 +10,13 @@ Transaction.init({
     primaryKey: true,
     autoIncrement: true,
   },
+  order_id: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: "order",
+      key: "id",
+    },
+  },
   payment_id: {
     type: DataTypes.INTEGER,
     references: {
@@ -21,6 +28,13 @@ Transaction.init({
     type: DataTypes.INTEGER,
     references: {
       model: "delivery",
+      key: "id",
+    },
+  },
+  user_id: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: "user",
       key: "id",
     },
   },

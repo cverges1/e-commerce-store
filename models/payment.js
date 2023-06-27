@@ -10,10 +10,6 @@ Payment.init({
     primaryKey: true,
     autoIncrement: true,
   },
-  funds: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
   date: {
     type: DataTypes.DATE,
     allowNull: false,
@@ -25,10 +21,10 @@ Payment.init({
       key: "id",
     },
   },
-  product_id: {
+  order_id: {
     type: DataTypes.INTEGER,
     references: {
-      model: "product",
+      model: "order",
       key: "id",
     },
   },

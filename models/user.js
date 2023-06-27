@@ -53,6 +53,10 @@ User.init({
       isCreditCard: true,
     },
   },
+  funds: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
   sequelize,
   timestamps: false,
   freezeTableName: true,
