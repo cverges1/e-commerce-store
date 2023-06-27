@@ -7,8 +7,10 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+//need to set up handlebars
+
 const sess = {
-  secret: SECRET,
+  secret: process.env.SECRET,
   cookie: {
     maxAge: 300000,
     httpOnly: true,
