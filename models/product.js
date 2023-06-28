@@ -22,6 +22,9 @@ Product.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
+    on_sale: {
+      type: DataTypes.BOOLEAN,
+    },
     category_id: {
       type: DataTypes.STRING,
       allowNull: false,
