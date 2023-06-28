@@ -31,7 +31,6 @@ Payment.init({
   sequelize: connection,
   timestamps: false,
   freezeTableName: true,
-  underscored: true,
   modelName: "payment",
 });
 

@@ -5,6 +5,7 @@ const {
   Category,
   Transaction,
   Merchant,
+  Order,
 } = require("../models");
 
 const userData = require("./userData.json");
@@ -12,6 +13,7 @@ const categoryData = require("./categoryData.json");
 const merchantData = require("./merchantData.json");
 const productData = require("./productData.json");
 const transactionData = require("./transactionData.json");
+const orderData = require("./orderData.json");
 
 
 const seedData = async () => {
@@ -22,6 +24,7 @@ const seedData = async () => {
   await Category.bulkCreate(categoryData);
   await Product.bulkCreate(productData);
   await Transaction.bulkCreate(transactionData);
+  await Order.bulkCreate(productData);
 };
 
 seedData();

@@ -65,7 +65,7 @@ Product.belongsTo(Order, {
   foreignKey: "productId",
 });
 
-Transaction.hasOne(Payment, {
+Transaction.hasMany(Payment, {
   foreignKey: "paymentId",
 });
 
@@ -73,7 +73,7 @@ Payment.belongsTo(Transaction, {
   foreignKey: "paymentId",
 });
 
-Transaction.hasOne(Order, {
+Transaction.hasMany(Order, {
   foreignKey: "orderId",
 });
 
@@ -81,7 +81,7 @@ Order.belongsTo(Transaction, {
   foreignKey: "orderId",
 });
 
-Transaction.hasOne(Delivery, {
+Transaction.hasMany(Delivery, {
   foreignKey: "deliveryId",
 });
 

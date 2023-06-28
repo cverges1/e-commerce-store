@@ -1,24 +1,24 @@
 [{
     "name": "Phalarope, red-necked",
-    "description": "Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl. Nunc nisl.",
+    "description": "Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
     "on_sale": false,
-    "category_id": 3,
+    "category_id": 1,
     "merchant_id": 6
   }, {
     "name": "Stork, greater adjutant",
-    "description": "Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+    "description": "Fusce consequat. Nulla nisl.",
     "on_sale": false,
     "category_id": 1,
     "merchant_id": 6
   }, {
     "name": "Porcupine, tree",
-    "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
+    "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
     "on_sale": false,
     "category_id": 2,
     "merchant_id": 8
   }, {
     "name": "Grey phalarope",
-    "description": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+    "description": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
     "on_sale": false,
     "category_id": 1,
     "merchant_id": 9
@@ -36,25 +36,25 @@
     "merchant_id": 7
   }, {
     "name": "Swainson's francolin",
-    "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus.",
+    "description": "Proin interdum mauris non ligula pellentesque ultrices.",
     "on_sale": true,
     "category_id": 4,
     "merchant_id": 7
   }, {
     "name": "Springhare",
-    "description": "Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
+    "description": "Cras pellentesque volutpat dui.",
     "on_sale": true,
     "category_id": 4,
     "merchant_id": 5
   }, {
     "name": "Black curlew",
-    "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "on_sale": false,
     "category_id": 2,
     "merchant_id": 3
   }, {
     "name": "Eurasian badger",
-    "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien.",
+    "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.",
     "on_sale": true,
     "category_id": 3,
     "merchant_id": 8
