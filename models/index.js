@@ -7,14 +7,6 @@ const Transaction = require("./transaction");
 const Delivery = require("./delivery");
 const Order = require("./order");
 
-User.hasMany(Product, {
-  foreignKey: "userId",
-});
-
-Product.belongsTo(User, {
-  foreignKey: "userId",
-});
-
 User.hasMany(Payment, {
   foreignKey: "userId",
 });
@@ -83,12 +75,12 @@ Order.belongsTo(Transaction, {
 });
 
 Transaction.hasOne(Delivery, {
-    foreignKey: "deliveryId",
-  });
-  
-  Delivery.belongsTo(Transaction, {
-    foreignKey: "deliveryId",
-  });
+  foreignKey: "deliveryId",
+});
+
+Delivery.belongsTo(Transaction, {
+  foreignKey: "deliveryId",
+});
 
 module.exports = {
   User,
