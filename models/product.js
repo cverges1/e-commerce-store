@@ -22,7 +22,7 @@ Product.init(
       type: DataTypes.BOOLEAN,
     },
     category_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: "category",

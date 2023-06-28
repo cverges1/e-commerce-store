@@ -48,14 +48,14 @@ User.init(
       allowNull: false,
     },
     payment_info: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         isCreditCard: true,
       },
     },
     funds: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     }},{
     sequelize: connection,
