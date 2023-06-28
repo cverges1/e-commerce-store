@@ -58,12 +58,11 @@ Product.belongsTo(Merchant, {
 });
 
 Order.hasMany(Product, {
-  foreignKey: "orderId",
-  onDelete: "CASCADE",
+  foreignKey: "productId",
 });
 
 Product.belongsTo(Order, {
-  foreignKey: "orderId",
+  foreignKey: "productId",
 });
 
 Transaction.hasOne(Payment, {
@@ -83,12 +82,12 @@ Order.belongsTo(Transaction, {
 });
 
 Transaction.hasOne(Delivery, {
-    foreignKey: "deliveryId",
-  });
-  
-  Delivery.belongsTo(Transaction, {
-    foreignKey: "deliveryId",
-  });
+  foreignKey: "deliveryId",
+});
+
+Delivery.belongsTo(Transaction, {
+  foreignKey: "deliveryId",
+});
 
 module.exports = {
   User,

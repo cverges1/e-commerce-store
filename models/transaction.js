@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const connection = require("../config/connection");
 
 class Transaction extends Model {}
 
@@ -37,11 +37,10 @@ Transaction.init({
       model: "user",
       key: "id",
     },
-  },
-  sequelize,
+  }},{
+  sequelize: connection,
   timestamps: false,
   freezeTableName: true,
-  underscored: true,
   modelName: "transaction",
 });
 

@@ -1,0 +1,102 @@
+[
+    {
+        "first_name": "Kingsley",
+        "last_name": "Gainsboro",
+        "email": "kgainsboro0@blinklist.com",
+        "password": "xI1*VHTq",
+        "shipping address": "9903 Scott Trail",
+        "billing address": "46 Sage Drive",
+        "payment_info": "diners-club-enroute",
+        "funds": "$4918.51"
+    },
+    {
+        "first_name": "Halimeda",
+        "last_name": "Gowing",
+        "email": "hgowing1@mozilla.org",
+        "password": "qO2{r83P%A|uv",
+        "shipping address": "3406 Sunfield Circle",
+        "billing address": "26 Hooker Trail",
+        "payment_info": "mastercard",
+        "funds": "$1199.41"
+    },
+    {
+        "first_name": "Atlanta",
+        "last_name": "Gillow",
+        "email": "agillow2@amazon.co.uk",
+        "password": "iT4#hfAT)T6_M{",
+        "shipping address": "690 Elgar Circle",
+        "billing address": "167 High Crossing Street",
+        "payment_info": "mastercard",
+        "funds": "$2975.73"
+    },
+    {
+        "first_name": "Jerrome",
+        "last_name": "Colloby",
+        "email": "jcolloby3@wikimedia.org",
+        "password": "dG4.%9Y?X8`",
+        "shipping address": "84 Basil Plaza",
+        "billing address": "7635 Logan Terrace",
+        "payment_info": "diners-club-carte-blanche",
+        "funds": "$6432.35"
+    },
+    {
+        "first_name": "Julian",
+        "last_name": "Luesley",
+        "email": "jluesley4@behance.net",
+        "password": "yY5\\W4T1*%pg4",
+        "shipping address": "4319 Kedzie Lane",
+        "billing address": "4486 Pawling Place",
+        "payment_info": "jcb",
+        "funds": "$4997.97"
+    },
+    {
+        "first_name": "Jess",
+        "last_name": "Guye",
+        "email": "jguye5@woothemes.com",
+        "password": "aN0_vVC@/yy",
+        "shipping address": "359 Daystar Way",
+        "billing address": "304 Hagan Trail",
+        "payment_info": "jcb",
+        "funds": "$7102.50"
+    },
+    {
+        "first_name": "Zachariah",
+        "last_name": "Lakenden",
+        "email": "zlakenden6@newsvine.com",
+        "password": "mX9/aeW}6WDF",
+        "shipping address": "26925 Vera Drive",
+        "billing address": "8906 Gulseth Terrace",
+        "payment_info": "china-unionpay",
+        "funds": "$4422.30"
+    },
+    {
+        "first_name": "Herold",
+        "last_name": "Guiel",
+        "email": "hguiel7@hugedomains.com",
+        "password": "xN1)%w,P",
+        "shipping address": "16343 Lindbergh Lane",
+        "billing address": "4136 Westend Center",
+        "payment_info": "jcb",
+        "funds": "$2084.74"
+    },
+    {
+        "first_name": "Derek",
+        "last_name": "Ebdon",
+        "email": "debdon8@youtube.com",
+        "password": "uJ7&r.odk(S",
+        "shipping address": "7232 Corry Alley",
+        "billing address": "222 Hanover Trail",
+        "payment_info": "china-unionpay",
+        "funds": "$5265.62"
+    },
+    {
+        "first_name": "Arch",
+        "last_name": "Escalero",
+        "email": "aescalero9@wisc.edu",
+        "password": "tI4!5o&M?&u<6",
+        "shipping address": "55006 Russell Lane",
+        "billing address": "6111 Montana Point",
+        "payment_info": "diners-club-carte-blanche",
+        "funds": "$8794.64"
+    }
+]

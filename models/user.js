@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
-const sequelize = require("../config/connection");
+const connection = require("../config/connection");
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -8,60 +8,80 @@ class User extends Model {
   }
 }
 
-User.init({
-  id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    primaryKey: true,
-    autoIncrement: true,
-  },
-  first_name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  last_name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
-    validate: {
-      isEmail: true,
+User.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-  },
-  password: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    validate: {
-      len: [8],
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-  },
-  shipping_address: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  billing_address: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  payment_info: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    validate: {
-      isCreditCard: true,
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true,
+      },
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [8],
+      },
+    },
+    shipping_address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    billing_address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    payment_info: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        isCreditCard: true,
+      },
+    },
+    funds: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    }},{
+    sequelize: connection,
+    timestamps: false,
+    freezeTableName: true,
+    modelName: "user",
   },
-  funds: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
-  sequelize,
-  timestamps: false,
-  freezeTableName: true,
-  underscored: true,
-  modelName: "user",
-});
+  {
+    hooks: {
+      beforeCreate: async (newUserData) => {
+        const plainTextPassword = newUserData.password;
+        const hashedPassword = await bcrypt.hash(plainTextPassword, 10);
+        newUserData.password = hashedPassword;
+        return newUserData;
+      },
+      beforeUpdate: async (updatedUserData) => {
+        const plainTextPassword = updatedUserData.password;
+        const hashedPassword = await bcrypt.hash(plainTextPassword, 10);
+        updatedUserData.password = hashedPassword;
+        return updatedUserData;
+      },
+  }},{
+    sequelize: connection,
+    timestamps: false,
+    freezeTableName: true,
+    modelName: "user",
+  });
 
 module.exports = User;
