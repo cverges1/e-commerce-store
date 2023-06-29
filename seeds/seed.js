@@ -8,6 +8,9 @@ const {
   Payment,
   Delivery,
 } = require("../models");
+
+const Admin  = require('../models/admin');
+
 const sequelize = require('../config/connection');
 
 const userData = require("./userData.json");
@@ -18,18 +21,20 @@ const transactionData = require("./transactionData.json");
 const orderData = require("./orderData.json");
 const paymentData = require("./paymentData.json");
 const deliveryData = require("./deliveryData.json");
+const adminData = require("./adminData.json");
 
 const seedData = async () => {
   await sequelize.sync({ force: true });
 
-  await User.bulkCreate(userData, {individualHooks: true });
   await Merchant.bulkCreate(merchantData);
+  await Delivery.bulkCreate(deliveryData);
   await Category.bulkCreate(categoryData);
   await Product.bulkCreate(productData);
+  await User.bulkCreate(userData, {individualHooks: true });
   await Order.bulkCreate(orderData);
   await Payment.bulkCreate(paymentData);
-  await Delivery.bulkCreate(deliveryData);
   await Transaction.bulkCreate(transactionData);
+  await Admin.bulkCreate(adminData, {individualHooks: true });
 };
 
 seedData();

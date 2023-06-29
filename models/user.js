@@ -57,16 +57,20 @@ User.init(
     funds: {
       type: DataTypes.STRING,
       allowNull: false,
-    }},{
-    sequelize: connection,
-    timestamps: false,
-    freezeTableName: true,
-    modelName: "user",
+    },
+    merchant_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "merchant",
+        key: "id",
+      },
+    },
   },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
-        const plainTextPassword = newUserData.password;
+        // console.log(newUserData.dataValues.password);
+        const plainTextPassword = newUserData.dataValues.password;
         const hashedPassword = await bcrypt.hash(plainTextPassword, 10);
         newUserData.password = hashedPassword;
         return newUserData;
@@ -77,12 +81,13 @@ User.init(
         updatedUserData.password = hashedPassword;
         return updatedUserData;
       },
-  }},{
+    },
     sequelize: connection,
     timestamps: false,
     underscored: true,
     freezeTableName: true,
     modelName: "user",
-  });
+  }
+);
 
 module.exports = User;

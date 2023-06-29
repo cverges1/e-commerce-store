@@ -1,41 +1,51 @@
 [{
     "date": "11/18/2022",
+    "payment_amt": 20,
     "user_id": 2,
     "order_id": 10
   }, {
     "date": "10/1/2022",
+    "payment_amt": 20,
     "user_id": 3,
     "order_id": 7
   }, {
     "date": "5/16/2023",
+    "payment_amt": 23,
     "user_id": 9,
     "order_id": 3
   }, {
     "date": "4/2/2023",
+    "payment_amt": 57,
     "user_id": 9,
     "order_id": 2
   }, {
     "date": "2/17/2023",
+    "payment_amt": 122,
     "user_id": 7,
     "order_id": 3
   }, {
     "date": "4/26/2023",
+    "payment_amt": 5.75,
     "user_id": 1,
     "order_id": 10
   }, {
     "date": "1/26/2023",
+    "payment_amt": 5.75,
     "user_id": 5,
     "order_id": 4
   }, {
     "date": "5/5/2023",
+    "payment_amt": 44.8,
     "user_id": 2,
     "order_id": 2
   }, {
     "date": "4/9/2023",
+    "payment_amt": 900,
     "user_id": 6,
     "order_id": 3
   }, {
     "date": "1/16/2023",
+    "payment_amt": 22,
     "user_id": 7,
     "order_id": 5
   }]

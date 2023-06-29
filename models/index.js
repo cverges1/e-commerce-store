@@ -6,6 +6,7 @@ const Payment = require("./payment");
 const Transaction = require("./transaction");
 const Delivery = require("./delivery");
 const Order = require("./order");
+const Admin = require("./admin");
 
 User.hasMany(Product, {
   foreignKey: "user_id",
@@ -31,11 +32,27 @@ Order.belongsTo(User, {
   foreignKey: "user_id",
 });
 
+User.hasMany(Payment, {
+  foreignKey: "user_id",
+});
+
+Payment.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
 User.hasMany(Transaction, {
   foreignKey: "user_id",
 });
 
 Transaction.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+User.hasMany(Admin, {
+  foreignKey: "user_id",
+});
+
+Admin.belongsTo(User, {
   foreignKey: "user_id",
 });
 
@@ -46,6 +63,15 @@ Category.hasMany(Product, {
 
 Product.belongsTo(Category, {
   foreignKey: "category_id",
+});
+
+Merchant.hasMany(User, {
+  foreignKey: "merchant_id",
+  onDelete: "CASCADE",
+});
+
+User.belongsTo(Merchant, {
+  foreignKey: "merchant_id",
 });
 
 Merchant.hasMany(Product, {
