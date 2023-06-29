@@ -16,6 +16,7 @@ Delivery.init({
   }},{
   sequelize: connection,
   timestamps: false,
+  underscored: true,
   freezeTableName: true,
   modelName: "delivery",
 });
