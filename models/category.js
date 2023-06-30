@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const connection = require("../config/connection");
 
 class Category extends Model {}
 
@@ -13,11 +13,11 @@ Category.init({
   name: {
     type: DataTypes.STRING,
     allowNull: false,
-  },
-  sequelize,
+  }},{
+  sequelize: connection,
   timestamps: false,
-  freezeTableName: true,
   underscored: true,
+  freezeTableName: true,
   modelName: "category",
 });
 

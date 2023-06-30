@@ -1,0 +1,62 @@
+[{
+    "name": "Phalarope, red-necked",
+    "description": "Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+    "on_sale": false,
+    "category_id": 1,
+    "merchant_id": 6
+  }, {
+    "name": "Stork, greater adjutant",
+    "description": "Fusce consequat. Nulla nisl.",
+    "on_sale": false,
+    "category_id": 1,
+    "merchant_id": 6
+  }, {
+    "name": "Porcupine, tree",
+    "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+    "on_sale": false,
+    "category_id": 2,
+    "merchant_id": 8
+  }, {
+    "name": "Grey phalarope",
+    "description": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+    "on_sale": false,
+    "category_id": 1,
+    "merchant_id": 9
+  }, {
+    "name": "Gull, swallow-tail",
+    "description": "Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.",
+    "on_sale": false,
+    "category_id": 2,
+    "merchant_id": 1
+  }, {
+    "name": "Asiatic wild ass",
+    "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "on_sale": true,
+    "category_id": 4,
+    "merchant_id": 7
+  }, {
+    "name": "Swainson's francolin",
+    "description": "Proin interdum mauris non ligula pellentesque ultrices.",
+    "on_sale": true,
+    "category_id": 4,
+    "merchant_id": 7
+  }, {
+    "name": "Springhare",
+    "description": "Cras pellentesque volutpat dui.",
+    "on_sale": true,
+    "category_id": 4,
+    "merchant_id": 5
+  }, {
+    "name": "Black curlew",
+    "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "on_sale": false,
+    "category_id": 2,
+    "merchant_id": 3
+  }, {
+    "name": "Eurasian badger",
+    "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.",
+    "on_sale": true,
+    "category_id": 3,
+    "merchant_id": 8
+  }]
+  

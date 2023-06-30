@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const connection = require("../config/connection");
 
 class Product extends Model {}
 
@@ -18,12 +18,11 @@ Product.init(
     description: {
       type: DataTypes.STRING,
     },
-    date: {
-      type: DataTypes.DATE,
-      allowNull: false,
+    on_sale: {
+      type: DataTypes.BOOLEAN,
     },
     category_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: "category",
@@ -36,11 +35,11 @@ Product.init(
         model: "merchant",
         key: "id",
       },
-    },
-    sequelize,
+    }},{
+    sequelize: connection,
     timestamps: false,
-    freezeTableName: true,
     underscored: true,
+    freezeTableName: true,
     modelName: "product",
   });
 

@@ -1,20 +1,20 @@
 const { Model, DataTypes } = require("sequelize");
+const bcrypt = require("bcrypt");
 const connection = require("../config/connection");
 
-class Order extends Model {}
+class Admin extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 
-Order.init(
+Admin.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    },
-    date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -23,19 +23,14 @@ Order.init(
         key: "id",
       },
     },
-    product_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "product",
-        key: "id",
-      },
-    }},{
+  },
+  {
     sequelize: connection,
     timestamps: false,
     underscored: true,
     freezeTableName: true,
-    modelName: "order",
-  });
+    modelName: "admin",
+  }
+);
 
-module.exports = Order;
+module.exports = Admin;

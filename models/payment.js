@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const connection = require("../config/connection");
 
 class Payment extends Model {}
 
@@ -12,6 +12,10 @@ Payment.init({
   },
   date: {
     type: DataTypes.DATE,
+    allowNull: false,
+  },
+  payment_amt: {
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
   user_id: {
@@ -27,11 +31,11 @@ Payment.init({
       model: "order",
       key: "id",
     },
-  },
-  sequelize,
+  }},{
+  sequelize: connection,
   timestamps: false,
-  freezeTableName: true,
   underscored: true,
+  freezeTableName: true,
   modelName: "payment",
 });
 
