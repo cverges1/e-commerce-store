@@ -21,6 +21,9 @@ Product.init(
     on_sale: {
       type: DataTypes.BOOLEAN,
     },
+    product_image: {
+      type: DataTypes.STRING,
+    },
     category_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
