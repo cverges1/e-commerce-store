@@ -195,6 +195,7 @@ router.delete("/:userId", async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 /***** LOGIN *****/
 // Route to login an existing user
 // POST method with endpoint '/api/users/login'
@@ -205,6 +206,22 @@ router.post("/login", async (req, res) => {
     const user = await User.findOne({
       where: { email: req.body.email },
     });
+=======
+//LOGIN post method
+router.post('/login', async (req, res) => {
+	try {
+		const dbUserData = await User.findOne({
+			where: {
+					email: req.body.email,
+			},
+			}s
+		})
+	} catch (error) {
+		console.log(error);
+		res.status(500).json(err);
+	}
+})
+>>>>>>> 985e968 (login and logout routes)
 
     // if no user found, send back response with 400 status code (stay vague)
     if (!user)
