@@ -2,30 +2,20 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { User, Category, Product } = require('../../models');
 
-// Render homepage with all existing posts
+// Render homepage with all existing categories and products belonging to those categories
 router.get('/', async (req, res) => {
 	try {
-		const category = await Category.findAll({
-			include: [{ model: Product, attributes: ['name'] }],
-			attributes: {
-				include: [
-					// Use plain SQL to get a count of the number of products for each category
-					[
-						sequelize.literal(
-							'(SELECT COUNT(*) FROM product WHERE product.category_id = category.id)'
-						),
-						'categoriesCount',
-					],
-				],
-			},
+		const categoryData = await Category.findAll({
+			include: [{ model: Product }],
 		});
-		const serializedCategories = category.map((category) => category.get({ plain: true }));
+		const serializedCategories = categoryData.map((category) => category.get({ plain: true }));
+		console.log(serializedCategories);
 
 		// TODO: modify response with actual VIEW|template
 		res
 			.status(200)
 			.send(
-				'<h1>HOMEPAGE</h1><h2>Render the homepage view along with all posts retrieved.</h2>'
+				'<h1>HOMEPAGE</h1><h2>Render the homepage view along with all categories retrieved.</h2>'
 			);
 	} catch (error) {
 		console.log(error);
@@ -33,43 +23,51 @@ router.get('/', async (req, res) => {
 	}
 });
 
-// // Render single-post page with selected post
-// router.get('/post/:id', async (req, res) => {
-// 	try {
-// 		let post = await Post.findByPk(req.params.id, {
-// 			include: [
-// 				{ model: User, attributes: ['username'] },
-// 				{ model: Comment, include: { model: User, attributes: ['username'] } },
-// 			],
-// 			attributes: {
-// 				include: [
-// 					// Use plain SQL to get a count of the number of comments for each post
-// 					[
-// 						sequelize.literal(
-// 							'(SELECT COUNT(*) FROM comment WHERE comment.postId = post.id)'
-// 						),
-// 						'commentsCount',
-// 					],
-// 				],
-// 			},
-// 		});
+// Render single category with products in that category
+router.get('/category/:id', async (req, res) => {
+	try {
+		const categoryData = await Category.findByPk(req.params.id, {
+			include: [{ model: Product }],
+		});
 
-// 		if (!post) return res.status(404).json({ message: 'No post found.' });
+		if (!categoryData) return res.status(404).json({ message: 'No category found.' });
 
-// 		post = post.get({ plain: true });
-// 		console.log(post);
+		const serializedCategories = categoryData.get({ plain: true });
+		console.log(serializedCategories);
 
-// 		// TODO: modify response with actual VIEW|template
-// 		res
-// 			.status(200)
-// 			.send(
-// 				'<h1>SINGLE POST PAGE</h1><h2>Render the view for a single post along with the post retrieved.</h2>'
-// 			);
-// 	} catch (error) {
-// 		console.log(error);
-// 		res.status(500).json(error);
-// 	}
-// });
+		// TODO: modify response with actual VIEW|template
+		res
+			.status(200)
+			.send(
+				'<h1>SINGLE CATEGORY WITH PRODUCTS PAGE</h1><h2>Render the view for a CATEGORY along with the products retrieved.</h2>'
+			);
+	} catch (error) {
+		console.log(error);
+		res.status(500).json(error);
+	}
+});
+
+// Render single product
+router.get('/product/:id', async (req, res) => {
+	try {
+		const productData = await Product.findByPk(req.params.id, {});
+
+		if (!productData) return res.status(404).json({ message: 'No product found.' });
+
+		const serializedProducts = productData.get({ plain: true });
+		console.log(serializedProducts);
+
+		// TODO: modify response with actual VIEW|template
+		res
+			.status(200)
+			.send(
+				'<h1>SINGLE PRODUCT PAGE</h1><h2>Render the view for a single PRODUCT</h2>'
+			);
+	} catch (error) {
+		console.log(error);
+		res.status(500).json(error);
+	}
+});
 
 // // Render signup page
 // router.get('/signup', async (req, res) => {
