@@ -1,38 +1,27 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Post, User, Comment } = require('../../models');
+const { Transaction, User} = require('../../models');
 
-// Render dashboard with all posts ever created by the user logged in
-// Endpoint is '/dashboard/:userId'
+// Render dashboard with all transactions ever created by the user logged in
+// Endpoint is '/dashboard/:userId/transactions'
 // TODO: only authenticated users can access their dashboard
 // TODO: once we have set up our sessions, remove ':userId' from endpoint and get userId from req.sessions instead
-router.get('/:userId', async (req, res) => {
+router.get('/:user_id/transactions', async (req, res) => {
 	try {
-		const posts = await Post.findAll({
+		const userTransactions = await Transaction.findAll({
 			where: {
 				// TODO: eventually, get userId from req.sessions instead of req.params
-				userId: req.params.userId,
+				user_id: req.params.user_id,
 			},
-			include: [{ model: User, attributes: ['username'] }],
-			attributes: {
-				include: [
-					// Use plain SQL to get a count of the number of comments for each post
-					[
-						sequelize.literal(
-							'(SELECT COUNT(*) FROM comment WHERE comment.postId = post.id)'
-						),
-						'commentsCount',
-					],
-				],
-			},
+			include: [{ model: User }],
 		});
-		const serializedPosts = posts.map((post) => post.get({ plain: true }));
-
+		const serializedTransactions = userTransactions.map((transactions) => transactions.get({ plain: true }));
+		console.log(serializedTransactions)
 		// TODO: modify response with actual VIEW|template
 		res
 			.status(200)
 			.send(
-				'<h1>DASHBOARD</h1><h2>Render the dashboard view along with all posts from logged in user.</h2>'
+				'<h1>DASHBOARD</h1><h2>Render the dashboard view along with all orders from logged in user.</h2>'
 			);
 	} catch (error) {
 		console.log(error);
@@ -42,39 +31,25 @@ router.get('/:userId', async (req, res) => {
 
 // Render dashboard view for a single post created by the user logged in
 // Endpoint is '/dashboard/post/:id'
-router.get('/post/:id', async (req, res) => {
+router.get('/transaction/:id', async (req, res) => {
 	try {
-		let post = await Post.findOne({
+		let transaction = await Transaction.findOne({
 			where: {
 				id: req.params.id,
 				// TODO: might need to verify that post belongs to user attempting to view it (userId will come from req.sessions once we have set up our sessions)
 				// userId: req.session.userId
-			},
-			include: [
-				{ model: Comment, include: { model: User, attributes: ['username'] } },
-			],
-			attributes: {
-				include: [
-					// Use plain SQL to get count of the number of comments
-					[
-						sequelize.literal(
-							'(SELECT COUNT(*) FROM comment WHERE comment.postId = post.id)'
-						),
-						'commentsCount',
-					],
-				],
-			},
+			}
 		});
 
-		if (!post) return res.status(404).json({ message: 'No post found.' });
+		if (!transaction) return res.status(404).json({ message: 'No transaction found.' });
 
-		post = post.get({ plain: true });
-
+		transaction = transaction.get({ plain: true });
+		console.log(transaction);
 		// TODO: modify response with actual VIEW|template
 		res
 			.status(200)
 			.send(
-				'<h1>DASHBOARD</h1><h2>Render the dashboard view for a single post along with that post retrieved from the database.</h2>'
+				'<h1>DASHBOARD</h1><h2>Render the dashboard view for a single transaction.</h2>'
 			);
 	} catch (error) {
 		console.log(error);
