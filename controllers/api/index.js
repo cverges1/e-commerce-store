@@ -1,7 +1,15 @@
-// const router = require('express').Router();
+const router = require('express').Router();
 
-// router.use('/api', apiRoutes);
+const userRoutes = require('./userRoutes.js');
+const orderRoutes = require('./orderRoutes.js');
+const paymentRoutes = require('./paymentRoutes.js');
+const transactionRoutes = require('./transactionRoutes.js');
+const productRoutes = require('./productRoutes.js');
 
-// router.use((req, res) => res.send('<h1>Oops! Wrong Route!</h1>'));
+router.use('/users', userRoutes);
+router.use('/order', orderRoutes);
+router.use('/payment', paymentRoutes);
+router.use('/transaction', transactionRoutes);
+router.use('/product', productRoutes);
 
-// module.exports = router;
+module.exports = router;

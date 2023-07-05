@@ -18,6 +18,9 @@ Product.init(
     description: {
       type: DataTypes.STRING,
     },
+    price: {
+      type: DataTypes.STRING,
+    },
     on_sale: {
       type: DataTypes.BOOLEAN,
     },

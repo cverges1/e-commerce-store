@@ -1,4 +1,5 @@
 const router = require('express').Router();
+// imported in case literals are needed. delete if we do not use
 const sequelize = require('../../config/connection');
 const { Transaction, User} = require('../../models');
 

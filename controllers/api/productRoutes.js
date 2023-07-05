@@ -20,18 +20,5 @@ router.post('./product', async (req, res) => {
     }
 })
 
-//get a new product
-router.get('./product', async (req, res) => {
-    try {
-        const chosenProduct = await Product.findAll({
-            attributes: {
-                exclude: ['category_id', 'merchant_id'],
-                include: []
-            }
-        })
-    } catch (error) {
-        console.log(error);
-        req.status(500).json(error); // 500 internal server error message
-    }
-})
 
+module.exports = router;
