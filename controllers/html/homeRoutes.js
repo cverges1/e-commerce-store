@@ -15,10 +15,10 @@ router.get("/", async (req, res) => {
     console.log(serializedCategories);
     // HOMEPAGE WITH CATEGORIES AND PRODUCTS
     // TODO: modify response with actual VIEW|template replace .send with .render
-    res.status(200).send(
-      "<h1>HOMEPAGE</h1><h2>Render the homepage view along with all categories retrieved.</h2>"
-    );
-    // json(serializedCategories);
+    res.status(200).json(serializedCategories);
+    // send(
+      // "<h1>HOMEPAGE</h1><h2>Render the homepage view along with all categories retrieved.</h2>"
+      // );
 
   } catch (error) {
     console.log(error);
