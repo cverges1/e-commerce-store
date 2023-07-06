@@ -3,7 +3,11 @@ const session = require("express-session");
 
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
+// imports segment analytics
+const { Analytics } = require('@segment/analytics-node');
 const routes = require('./controllers');
+
+const analytics = new Analytics({ writeKey: 'fCvCtaAKBxvdEqrQ2WHlAT1jrsRT5eks'});
 
 const app = express();
 const PORT = process.env.PORT || 3001;

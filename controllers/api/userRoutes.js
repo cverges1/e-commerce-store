@@ -4,6 +4,9 @@ const sequelize = require('../../config/connection');
 const { User, Product, Category, Transaction } = require('../../models');
 // import helper function for authentication
 const withAuth = require('../../utils/auth');
+// imports segment analytics
+const { Analytics } = require('@segment/analytics-node');
+const analytics = new Analytics({ writeKey: 'fCvCtaAKBxvdEqrQ2WHlAT1jrsRT5eks'});
 
 /***** CREATE *****/
 // Route to sign up a new user
@@ -32,6 +35,22 @@ router.post('/', async (req, res) => {
 			(req.session.userId = newUser.id), (req.session.loggedIn = true);
 			res.status(201).json(newUser); // 201 - Created
 		});	
+
+		analytics.identify({
+			userId: req.body.email,
+			traits: {
+				firstName: req.body.first_name,
+				lastName: req.body.last_name,
+				email: req.body.email,
+				password:req.body.password,
+				address: req.body.shipping_address,
+			}
+		});
+
+		analytics.track({
+			userId: req.body.email,
+			event: "New User Registration"
+		})
 	} catch (error) {
 		console.log(error);
 		res.status(500).json(error); // 500 - Internal Server Error

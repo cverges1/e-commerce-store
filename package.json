@@ -13,6 +13,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@segment/analytics-node": "^1.0.0",
         "bcrypt": "^5.0.0",
         "connect-session-sequelize": "^7.0.4",
         "dotenv": "^8.2.0",
