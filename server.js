@@ -3,6 +3,11 @@ const session = require("express-session");
 
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
+// imports segment analytics
+const { Analytics } = require('@segment/analytics-node');
+const routes = require('./controllers');
+
+const analytics = new Analytics({ writeKey: 'fCvCtaAKBxvdEqrQ2WHlAT1jrsRT5eks'});
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -29,6 +34,8 @@ app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use(routes);
+
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log(`Now listening on ${PORT}`));
 });

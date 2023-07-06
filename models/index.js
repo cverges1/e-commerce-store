@@ -6,7 +6,6 @@ const Payment = require("./payment");
 const Transaction = require("./transaction");
 const Delivery = require("./delivery");
 const Order = require("./order");
-const Admin = require("./admin");
 
 User.hasMany(Product, {
   foreignKey: "user_id",
@@ -45,14 +44,6 @@ User.hasMany(Transaction, {
 });
 
 Transaction.belongsTo(User, {
-  foreignKey: "user_id",
-});
-
-User.hasMany(Admin, {
-  foreignKey: "user_id",
-});
-
-Admin.belongsTo(User, {
   foreignKey: "user_id",
 });
 

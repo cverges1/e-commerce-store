@@ -1,41 +1,51 @@
 [{
-    "date": "7/24/2022",
-    "user_id": 3,
-    "product_id": 1
-  }, {
-    "date": "11/23/2022",
-    "user_id": 9,
-    "product_id": 6
-  }, {
-    "date": "7/21/2022",
-    "user_id": 2,
-    "product_id": 7
-  }, {
-    "date": "11/10/2022",
-    "user_id": 7,
-    "product_id": 5
-  }, {
-    "date": "7/20/2022",
-    "user_id": 6,
-    "product_id": 10
-  }, {
-    "date": "7/29/2022",
-    "user_id": 4,
-    "product_id": 4
-  }, {
-    "date": "10/1/2022",
-    "user_id": 7,
-    "product_id": 5
-  }, {
-    "date": "3/16/2023",
-    "user_id": 4,
-    "product_id": 3
-  }, {
-    "date": "11/12/2022",
-    "user_id": 4,
-    "product_id": 6
-  }, {
-    "date": "8/19/2022",
-    "user_id": 2,
-    "product_id": 9
-  }]
+  "date": "2/20/2023",
+  "quantity": 8,
+  "user_id": 6,
+  "product_id": 5
+}, {
+  "date": "1/2/2023",
+  "quantity": 8,
+  "user_id": 6,
+  "product_id": 3
+}, {
+  "date": "7/24/2022",
+  "quantity": 4,
+  "user_id": 7,
+  "product_id": 1
+}, {
+  "date": "11/30/2022",
+  "quantity": 3,
+  "user_id": 10,
+  "product_id": 5
+}, {
+  "date": "3/13/2023",
+  "quantity": 1,
+  "user_id": 5,
+  "product_id": 10
+}, {
+  "date": "1/6/2023",
+  "quantity": 8,
+  "user_id": 10,
+  "product_id": 10
+}, {
+  "date": "7/6/2022",
+  "quantity": 3,
+  "user_id": 1,
+  "product_id": 4
+}, {
+  "date": "3/15/2023",
+  "quantity": 3,
+  "user_id": 6,
+  "product_id": 3
+}, {
+  "date": "2/10/2023",
+  "quantity": 4,
+  "user_id": 9,
+  "product_id": 7
+}, {
+  "date": "8/4/2022",
+  "quantity": 2,
+  "user_id": 1,
+  "product_id": 9
+}]
