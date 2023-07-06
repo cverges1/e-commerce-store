@@ -50,12 +50,13 @@ User.init(
     payment_info: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isCreditCard: true,
-      },
     },
     funds: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    is_admin: {
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
     merchant_id: {

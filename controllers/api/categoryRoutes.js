@@ -1,5 +1,4 @@
 const router = require('express').Router();
+const { Category, Product } = require('../../models');
 
-
-const sequelize = require('../../config/connection');
-const { Category, Product, User, Transaction } = require('../../models');
+router.get()

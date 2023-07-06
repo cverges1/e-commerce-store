@@ -18,8 +18,11 @@ Product.init(
     description: {
       type: DataTypes.STRING,
     },
-    on_sale: {
-      type: DataTypes.BOOLEAN,
+    price: {
+      type: DataTypes.STRING,
+    },
+    on_sale_price: {
+      type: DataTypes.STRING,
     },
     product_image: {
       type: DataTypes.STRING,
