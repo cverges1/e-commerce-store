@@ -21,8 +21,8 @@ Product.init(
     price: {
       type: DataTypes.STRING,
     },
-    on_sale: {
-      type: DataTypes.BOOLEAN,
+    on_sale_price: {
+      type: DataTypes.STRING,
     },
     category_id: {
       type: DataTypes.INTEGER,

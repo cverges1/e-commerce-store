@@ -7,9 +7,9 @@ const transactionRoutes = require('./transactionRoutes.js');
 const productRoutes = require('./productRoutes.js');
 
 router.use('/users', userRoutes);
-router.use('/order', orderRoutes);
-router.use('/payment', paymentRoutes);
-router.use('/transaction', transactionRoutes);
-router.use('/product', productRoutes);
+router.use('/orders', orderRoutes);
+router.use('/payments', paymentRoutes);
+router.use('/transactions', transactionRoutes);
+router.use('/products', productRoutes);
 
 module.exports = router;

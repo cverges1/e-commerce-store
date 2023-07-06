@@ -18,7 +18,7 @@ router.post('./product', async (req, res) => {
         console.log(error);
         req.status(500).json(error);
     }
-})
+});
 
 
 module.exports = router;
