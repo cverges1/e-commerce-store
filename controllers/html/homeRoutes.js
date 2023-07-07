@@ -54,7 +54,7 @@ router.get("/", async (req, res) => {
 
     res
 
-      // .status(200)
+      .status(200)
       .render(
         'homepage', { 
           allCategories: serializedCategories, 
