@@ -3,6 +3,7 @@
   "description": "Chicken and Rice Formula Dry Dog Food - 40 lb. Bag",
   "price": "$54.00",
   "on_sale_price": null,
+  "arrival": false,
   "image": "https://m.media-amazon.com/images/I/719YSIMps7L._AC_UL640_FMwebp_QL65_.jpg",
   "category_id": 1,
   "merchant_id": 1
@@ -11,6 +12,7 @@
   "description": "Life Protection Formula Natural Adult Dry Dog Food, Chicken and Brown Rice 30-lb.",
   "price": "$63.07",
   "on_sale_price": null,
+  "arrival": false,
   "image": "https://m.media-amazon.com/images/I/71gUaaYXmjL._AC_UL640_FMwebp_QL65_.jpg",
   "category_id": 1,
   "merchant_id": 2
@@ -19,6 +21,7 @@
   "description": "Complete Health Dry Dog Food with Grains, Made in USA with Real Meat & Natural Ingredients, All Breeds, Adult Dogs (Chicken & Oatmeal, 30-lb) – With Nutrients for Immune, Skin, & Coat Support",
   "price": "$69.98",
   "on_sale_price": "$52.47",
+  "arrival": false,
   "image": "https://m.media-amazon.com/images/I/71pUFr37V6L._AC_UL640_FMwebp_QL65_.jpg",
   "category_id": 1,
   "merchant_id": 3
@@ -27,6 +30,7 @@
   "description": "Blue Buffalo Life Protection Formula Natural Adult Dry Dog Food, Chicken and Brown Rice 5-lb Trial Size Bag.",
   "price": "$14.98",
   "on_sale_price": null,
+  "arrival": false,
   "image": "https://m.media-amazon.com/images/I/81qYRubwRpL._AC_UL640_FMwebp_QL65_.jpg",
   "category_id": 1,
   "merchant_id": 2
@@ -35,6 +39,7 @@
   "description": "Dog Squeaky Chew Toys for Aggressive Chewers, Rubber Carrot Dog Toys for Training and Cleaning, Durable Interactive Tough Dog Toy for Puppy Medium Dogs.",
   "price": "$11.99",
   "on_sale_price": null,
+  "arrival": false,
   "image": "https://m.media-amazon.com/images/I/61y3+f4n3pL._AC_SX679_.jpg",
   "category_id": 2,
   "merchant_id": 4
@@ -43,6 +48,7 @@
   "description": "Puppy Chew Toys for Teething, Interactive Dog Rope Toys with Bin for Small Medium Breed.",
   "price": "$20.99",
   "on_sale_price": "$152.03",
+  "arrival": false,
   "image": "https://m.media-amazon.com/images/I/71GZhJAdpSL._AC_UL640_FMwebp_QL65_.jpg",
   "category_id": 2,
   "merchant_id": 5
@@ -51,6 +57,7 @@
   "description": "Squeaky Toys 5 Pack, Pet Toys Crinkle Dog Toy No Stuffing Animals Dog Plush Toy Dog Chew Toy for Large Dogs and Medium Dogs Squeeky Doggie Toys Puppy Toys Squeak.",
   "price": "$22.99",
   "on_sale_price": "$18.51",
+  "arrival": true,
   "image": "https://m.media-amazon.com/images/I/71jYYOy8pkL._AC_UL640_FMwebp_QL65_.jpg",
   "category_id": 2,
   "merchant_id": 6
@@ -59,7 +66,8 @@
   "description": "Best Pet Supplies Crinkle Dog Toy for Small, Medium, and Large Breeds, Cute No Stuffing Duck with Soft Squeaker.",
   "price": "$5.95",
   "on_sale_price": null,
-  "image": "",
+  "arrival": false,
+  "image": "https://m.media-amazon.com/images/I/61iLNIUwPnL._AC_UL640_FMwebp_QL65_.jpg",
   "category_id": 2,
   "merchant_id": 7
 }, {
@@ -67,6 +75,7 @@
   "description": "Dog leashes for Large Dogs Rope Leash Heavy Duty Dog Leash with Comfortable Padded Handle and Highly Reflective Threads 5 FT for Small Medium Large Dogs(Orange).",
   "price": "$25.48",
   "on_sale_price": null,
+  "arrival": false,
   "image": "https://m.media-amazon.com/images/I/81OElq5BNWL._AC_SX679_.jpg",
   "category_id": 3,
   "merchant_id": 8
@@ -75,6 +84,7 @@
   "description": "5ft 1/2in for Large Dogs & Medium Size Dogs - Highly Reflective Heavy Duty Dog Rope Leash with Soft Padded Anti-Slip Handle- for 18-120 lbs Dogs.",
   "price": "$8.99",
   "on_sale_price": null,
+  "arrival": true,
   "image": "https://m.media-amazon.com/images/I/71qm9q3z5oL._AC_SX679_.jpg",
   "category_id": 3,
   "merchant_id": 9
@@ -83,6 +93,7 @@
   "description": "Quick Release Buckle,Training Dog Leash,Dog's Leash with Rotating Frog Clip, 2 Soft Control Handles,and Reflective Threads. (Black, L).",
   "price": "$15.99",
   "on_sale_price": "$14.39",
+  "arrival": false,
   "image": "https://m.media-amazon.com/images/I/71piL0mcnCL._AC_SX679_.jpg",
   "category_id": 3,
   "merchant_id": 10
@@ -91,6 +102,7 @@
   "description": "5ft 1/2in for Large Dogs & Medium Size Dogs - Highly Reflective Heavy Duty Dog Rope Leash with Soft Padded Anti-Slip Handle- for 18-120 lbs Dogs.",
   "price": "$8.99",
   "on_sale_price": null,
+  "arrival": false,
   "image": "https://m.media-amazon.com/images/I/71E8EEfV+2S._AC_SX679_.jpg",
   "category_id": 3,
   "merchant_id": 9
@@ -99,6 +111,7 @@
   "description": "Washable Dog Bed for Extra Large Dogs with Waterproof Liner, Shredded Memory Foam XL Dog Crate Bed with Removable Cover, Fit Up to 90 LBs Pet Mat Pillow.",
   "price": "$39.99",
   "on_sale_price": "$31.99",
+  "arrival": false,
   "image": "https://m.media-amazon.com/images/I/71aiE1rGXdL._AC_SX679_.jpg",
   "category_id": 4,
   "merchant_id": 11
@@ -107,6 +120,7 @@
   "description": "Washable Dog Beds for Large Dogs with Waterproof Liner, Shredded Memory Foam Big Dog Crate Bed with Removable Cover, Fit Up to 75 LBs Pet Mat Pillow.",
   "price": "$37.99",
   "on_sale_price": "$30.39",
+  "arrival": true,
   "image": "https://m.media-amazon.com/images/I/715x5bU9dWL._AC_SX679_.jpg",
   "category_id": 4,
   "merchant_id": 11
@@ -115,6 +129,7 @@
   "description": "Washable Dog Beds for Medium and Large Dogs with Waterproof Liner Pet Bed, Shredded Memory Foam Dog Crate Bed with Removable Cover, Fit Up to 65 LBs Pet Mat Pillow Orthopedic Beds.",
   "price": "$29.99",
   "on_sale_price": null,
+  "arrival": false,
   "image": "https://m.media-amazon.com/images/I/718+VuWUpSL._AC_SX679_.jpg",
   "category_id": 4,
   "merchant_id": 11
@@ -123,6 +138,7 @@
   "description": "Dog Bed for Small Medium Large Dogs.",
   "price": "$29.99",
   "on_sale_price": null,
+  "arrival": true,
   "image": "https://m.media-amazon.com/images/I/71YgN8ASz8L._AC_SX679_.jpg",
   "category_id": 4,
   "merchant_id": 12
