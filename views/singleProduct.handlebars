@@ -1,0 +1,39 @@
+{{#each serializedProduct as |Product|}}
+
+<div>
+    <div id="left-column">
+        <img src="/images/{{Product.}}" alt="">
+    </div>
+
+    <div id="right-column">
+        <div>
+            <p id="product-title">{{Product.}}</p>
+            <div>
+                <div id="quantity-box">
+                    <button>-</button>
+                    <p>1</p>
+                    <button>+</button>
+                </div>
+                <div id="add-to-cart-btn-div">
+                    <button id="add-to-cart-btn">ADD TO CART</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <p>DETAILS</p>
+            <p>{{Product.}}</p>
+        </div>
+
+        <div>
+            <p>SHIPPING</p>
+            <p>{{Product.}}</p>
+        </div>
+
+    </div>
+    
+    <p>{{Product.}}</p>
+</div>
+
+{{/each}}
