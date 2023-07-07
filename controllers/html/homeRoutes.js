@@ -13,14 +13,61 @@ router.get("/", async (req, res) => {
       category.get({ plain: true })
     );
     console.log(serializedCategories);
+    console.log(serializedCategories);
     // HOMEPAGE WITH CATEGORIES AND PRODUCTS
     // TODO: modify response with actual VIEW|template replace .send with .render
     res
-      // .status(200).json(serializedCategories);
-      .render('homepage', {serializedCategories});
-      // .send(
-      //   "<h1>HOMEPAGE</h1><h2>Render the homepage view along with all categories retrieved.</h2>"
-      // );
+      .status(200)
+      .render(
+        'homepage', { 
+          categories: serializedCategories, 
+          loggedIn: req.session.loggedIn,
+        });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+// Render homepage with all existing categories and products belonging to those categories
+// End point is /
+router.get("/products", async (req, res) => {
+  try {
+    const productData = await Product.findAll({
+    });
+    const serializedProducts = productData.map((products) =>
+    products.get({ plain: true })
+    );
+    // console.log(serializedProducts);
+
+    let saleProducts = [];
+    let newProduct = [];
+
+    for (let i=0; i<serializedProducts.length; i++) {
+      if(serializedProducts[i].on_sale_price) {
+        saleProducts.push(serializedProducts[i])
+      }
+
+      if (serializedProducts[i].arrival === true) {
+        newProduct.push(serializedProducts[i])
+      }
+    }
+
+    console.log("on sale", saleProducts);
+    console.log("new arrival", newProduct);
+
+    // HOMEPAGE WITH CATEGORIES AND PRODUCTS
+    // TODO: modify response with actual VIEW|template replace .send with .render
+    res
+
+      .status(200)
+      .render(
+        'homepage', { 
+          saleProducts: saleProducts, 
+          newProduct: newProduct,
+          loggedIn: req.session.loggedIn,
+        });
+
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
@@ -43,10 +90,12 @@ router.get("/category/:id", async (req, res) => {
 
     // TODO: modify response with actual VIEW|template replace .send with .render
     res
-      .status(200).json(serializedCategory);
-      // .send(
-      //   "<h1>SINGLE CATEGORY WITH PRODUCTS PAGE</h1><h2>Render the view for a CATEGORY along with the products retrieved.</h2>"
-      // );
+      .status(200)
+      .render(
+        'homepage', { 
+          category: serializedCategory, 
+          loggedIn: req.session.loggedIn,
+        });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
@@ -67,10 +116,12 @@ router.get("/product/:id", async (req, res) => {
 
     // TODO: modify response with actual VIEW|template single product page replace .send with .render
     res
-      .status(200).json(serializedProduct);
-      // .send(
-      //   "<h1>SINGLE PRODUCT PAGE</h1><h2>Render the view for a single PRODUCT</h2>"
-      // );
+      .status(200)
+      .render(
+        'homepage', { 
+          productData: serializedProduct, 
+          loggedIn: req.session.loggedIn,
+        });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);

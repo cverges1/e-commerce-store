@@ -1,71 +1,145 @@
 [{
-  "name": "Bat, little brown",
-  "description": "Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-  "price": "$87.33",
+  "name": "Purina ONE ",
+  "description": "Chicken and Rice Formula Dry Dog Food - 40 lb. Bag",
+  "price": "$54.00",
   "on_sale_price": null,
-  "category_id": 3,
+  "arrival": false,
+  "image": "https://m.media-amazon.com/images/I/719YSIMps7L._AC_UL640_FMwebp_QL65_.jpg",
+  "category_id": 1,
   "merchant_id": 1
 }, {
-  "name": "Square-lipped rhinoceros",
-  "description": "Aenean lectus. Pellentesque eget nunc.",
-  "price": "$125.78",
+  "name": "Blue Buffalo",
+  "description": "Life Protection Formula Natural Adult Dry Dog Food, Chicken and Brown Rice 30-lb.",
+  "price": "$63.07",
   "on_sale_price": null,
-  "category_id": 2,
-  "merchant_id": 5
-}, {
-  "name": "Monkey, vervet",
-  "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
-  "price": "$351.98",
-  "on_sale_price": "$118.85",
-  "category_id": 2,
-  "merchant_id": 3
-}, {
-  "name": "Porcupine, african",
-  "description": "Nam nulla.",
-  "price": "$142.83",
-  "on_sale_price": null,
-  "category_id": 2,
-  "merchant_id": 3
-}, {
-  "name": "Bateleur eagle",
-  "description": "Suspendisse potenti. In eleifend quam a odio.",
-  "price": "$216.91",
-  "on_sale_price": null,
-  "category_id": 4,
+  "arrival": false,
+  "image": "https://m.media-amazon.com/images/I/71gUaaYXmjL._AC_UL640_FMwebp_QL65_.jpg",
+  "category_id": 1,
   "merchant_id": 2
 }, {
-  "name": "Boa, emerald green tree",
-  "description": "Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-  "price": "$316.82",
-  "on_sale_price": "$152.03",
-  "category_id": 1,
-  "merchant_id": 9
-}, {
-  "name": "Kori bustard",
-  "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.",
-  "price": "$197.62",
-  "on_sale_price": "$125.39",
-  "category_id": 4,
-  "merchant_id": 5
-}, {
-  "name": "Owl, madagascar hawk",
-  "description": "Morbi a ipsum. Integer a nibh. In quis justo.",
-  "price": "$188.95",
-  "on_sale_price": "$167.73",
-  "category_id": 2,
-  "merchant_id": 9
-}, {
-  "name": "Capuchin, weeper",
-  "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros.",
-  "price": "$459.48",
-  "on_sale_price": null,
-  "category_id": 1,
-  "merchant_id": 8
-}, {
-  "name": "Rabbit, eastern cottontail",
-  "description": "Etiam faucibus cursus urna. Ut tellus.",
-  "price": "$98.02",
-  "on_sale_price": null,
+  "name": "Wellness",
+  "description": "Complete Health Dry Dog Food with Grains, Made in USA with Real Meat & Natural Ingredients, All Breeds, Adult Dogs (Chicken & Oatmeal, 30-lb) – With Nutrients for Immune, Skin, & Coat Support",
+  "price": "$69.98",
+  "on_sale_price": "$52.47",
+  "arrival": false,
+  "image": "https://m.media-amazon.com/images/I/71pUFr37V6L._AC_UL640_FMwebp_QL65_.jpg",
   "category_id": 1,
   "merchant_id": 3
+}, {
+  "name": "Blue Buffalo",
+  "description": "Blue Buffalo Life Protection Formula Natural Adult Dry Dog Food, Chicken and Brown Rice 5-lb Trial Size Bag.",
+  "price": "$14.98",
+  "on_sale_price": null,
+  "arrival": false,
+  "image": "https://m.media-amazon.com/images/I/81qYRubwRpL._AC_UL640_FMwebp_QL65_.jpg",
+  "category_id": 1,
+  "merchant_id": 2
+}, {
+  "name": "Squeaky Carrot Toy",
+  "description": "Dog Squeaky Chew Toys for Aggressive Chewers, Rubber Carrot Dog Toys for Training and Cleaning, Durable Interactive Tough Dog Toy for Puppy Medium Dogs.",
+  "price": "$11.99",
+  "on_sale_price": null,
+  "arrival": false,
+  "image": "https://m.media-amazon.com/images/I/61y3+f4n3pL._AC_SX679_.jpg",
+  "category_id": 2,
+  "merchant_id": 4
+}, {
+  "name": "ESYLIF 20 pack Chew Toys",
+  "description": "Puppy Chew Toys for Teething, Interactive Dog Rope Toys with Bin for Small Medium Breed.",
+  "price": "$20.99",
+  "on_sale_price": "$152.03",
+  "arrival": false,
+  "image": "https://m.media-amazon.com/images/I/71GZhJAdpSL._AC_UL640_FMwebp_QL65_.jpg",
+  "category_id": 2,
+  "merchant_id": 5
+}, {
+  "name": "SHARLOVY Dog Squeaky Toys",
+  "description": "Squeaky Toys 5 Pack, Pet Toys Crinkle Dog Toy No Stuffing Animals Dog Plush Toy Dog Chew Toy for Large Dogs and Medium Dogs Squeeky Doggie Toys Puppy Toys Squeak.",
+  "price": "$22.99",
+  "on_sale_price": "$18.51",
+  "arrival": true,
+  "image": "https://m.media-amazon.com/images/I/71jYYOy8pkL._AC_UL640_FMwebp_QL65_.jpg",
+  "category_id": 2,
+  "merchant_id": 6
+}, {
+  "name": "Crinkle Duck",
+  "description": "Best Pet Supplies Crinkle Dog Toy for Small, Medium, and Large Breeds, Cute No Stuffing Duck with Soft Squeaker.",
+  "price": "$5.95",
+  "on_sale_price": null,
+  "arrival": false,
+  "image": "https://m.media-amazon.com/images/I/61iLNIUwPnL._AC_UL640_FMwebp_QL65_.jpg",
+  "category_id": 2,
+  "merchant_id": 7
+}, {
+  "name": "BARKBAY Leash for Large Dogs",
+  "description": "Dog leashes for Large Dogs Rope Leash Heavy Duty Dog Leash with Comfortable Padded Handle and Highly Reflective Threads 5 FT for Small Medium Large Dogs(Orange).",
+  "price": "$25.48",
+  "on_sale_price": null,
+  "arrival": false,
+  "image": "https://m.media-amazon.com/images/I/81OElq5BNWL._AC_SX679_.jpg",
+  "category_id": 3,
+  "merchant_id": 8
+}, {
+  "name": "Petmegoo Strong Green Dog Leash",
+  "description": "5ft 1/2in for Large Dogs & Medium Size Dogs - Highly Reflective Heavy Duty Dog Rope Leash with Soft Padded Anti-Slip Handle- for 18-120 lbs Dogs.",
+  "price": "$8.99",
+  "on_sale_price": null,
+  "arrival": true,
+  "image": "https://m.media-amazon.com/images/I/71qm9q3z5oL._AC_SX679_.jpg",
+  "category_id": 3,
+  "merchant_id": 9
+}, {
+  "name": "Annalovic Dog Leash",
+  "description": "Quick Release Buckle,Training Dog Leash,Dog's Leash with Rotating Frog Clip, 2 Soft Control Handles,and Reflective Threads. (Black, L).",
+  "price": "$15.99",
+  "on_sale_price": "$14.39",
+  "arrival": false,
+  "image": "https://m.media-amazon.com/images/I/71piL0mcnCL._AC_SX679_.jpg",
+  "category_id": 3,
+  "merchant_id": 10
+}, {
+  "name": "Petmegoo Strong Purple Dog Leash",
+  "description": "5ft 1/2in for Large Dogs & Medium Size Dogs - Highly Reflective Heavy Duty Dog Rope Leash with Soft Padded Anti-Slip Handle- for 18-120 lbs Dogs.",
+  "price": "$8.99",
+  "on_sale_price": null,
+  "arrival": false,
+  "image": "https://m.media-amazon.com/images/I/71E8EEfV+2S._AC_SX679_.jpg",
+  "category_id": 3,
+  "merchant_id": 9
+}, {
+  "name": "pettycare Washable Dog Bed",
+  "description": "Washable Dog Bed for Extra Large Dogs with Waterproof Liner, Shredded Memory Foam XL Dog Crate Bed with Removable Cover, Fit Up to 90 LBs Pet Mat Pillow.",
+  "price": "$39.99",
+  "on_sale_price": "$31.99",
+  "arrival": false,
+  "image": "https://m.media-amazon.com/images/I/71aiE1rGXdL._AC_SX679_.jpg",
+  "category_id": 4,
+  "merchant_id": 11
+}, {
+  "name": "pettycare Washable Dog Bed",
+  "description": "Washable Dog Beds for Large Dogs with Waterproof Liner, Shredded Memory Foam Big Dog Crate Bed with Removable Cover, Fit Up to 75 LBs Pet Mat Pillow.",
+  "price": "$37.99",
+  "on_sale_price": "$30.39",
+  "arrival": true,
+  "image": "https://m.media-amazon.com/images/I/715x5bU9dWL._AC_SX679_.jpg",
+  "category_id": 4,
+  "merchant_id": 11
+}, {
+  "name": "pettycare Washable Dog Bed",
+  "description": "Washable Dog Beds for Medium and Large Dogs with Waterproof Liner Pet Bed, Shredded Memory Foam Dog Crate Bed with Removable Cover, Fit Up to 65 LBs Pet Mat Pillow Orthopedic Beds.",
+  "price": "$29.99",
+  "on_sale_price": null,
+  "arrival": false,
+  "image": "https://m.media-amazon.com/images/I/718+VuWUpSL._AC_SX679_.jpg",
+  "category_id": 4,
+  "merchant_id": 11
+}, {
+  "name": "MIXJOY Dog Bed",
+  "description": "Dog Bed for Small Medium Large Dogs.",
+  "price": "$29.99",
+  "on_sale_price": null,
+  "arrival": true,
+  "image": "https://m.media-amazon.com/images/I/71YgN8ASz8L._AC_SX679_.jpg",
+  "category_id": 4,
+  "merchant_id": 12
 }]
