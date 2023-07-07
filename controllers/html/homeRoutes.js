@@ -128,6 +128,7 @@ router.get("/product/:id", async (req, res) => {
 
 // Render signup page
 // End point is /signup
+// signUp
 router.get("/signup", async (req, res) => {
   if (req.session.logged_in) {
     // TODO: decide where to redirect users if they are logged in
@@ -135,11 +136,12 @@ router.get("/signup", async (req, res) => {
     return;
   }
   // TODO: modify response with actual VIEW|template go to sign up page
-  res.status(200).send("<h1>SIGN UP PAGE</h1><h2>Render the signup view.</h2>");
+  res.status(200).render('signUp');
 });
 
 // Render login page
 // End point is /login
+//signIn
 router.get("/login", async (req, res) => {
   if (req.session.logged_in) {
     // TODO: decide where to redirect users if they are logged in
@@ -147,7 +149,7 @@ router.get("/login", async (req, res) => {
     return;
   }
   // TODO: modify response with actual VIEW|template go to login page
-  res.status(200).send("<h1>LOGIN PAGE</h1><h2>Render the login view.</h2>");
+  res.status(200).render('signIn');
 });
 
 module.exports = router;
