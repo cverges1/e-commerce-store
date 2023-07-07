@@ -53,7 +53,8 @@ router.get("/", async (req, res) => {
     console.log("new arrival", newProducts);
 
     res
-      .status(200)
+
+      // .status(200)
       .render(
         'homepage', { 
           allCategories: serializedCategories, 
@@ -63,6 +64,7 @@ router.get("/", async (req, res) => {
           newProducts: newProducts,
           loggedIn: req.session.loggedIn,
         });
+
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
@@ -85,7 +87,7 @@ router.get("/category/:id", async (req, res) => {
 
     // TODO: modify response with actual VIEW|template replace .send with .render
     res
-      .status(200)
+      // .status(200)
       .render(
         'homepage', { 
           category: serializedCategory, 

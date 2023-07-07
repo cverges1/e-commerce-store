@@ -195,6 +195,7 @@ router.delete("/:userId", async (req, res) => {
   }
 });
 
+
 /***** LOGIN *****/
 // Route to login an existing user
 // POST method with endpoint '/api/users/login'
