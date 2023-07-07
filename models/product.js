@@ -24,6 +24,9 @@ Product.init(
     on_sale_price: {
       type: DataTypes.STRING,
     },
+    image: {
+      type: DataTypes.STRING,
+    },
     category_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
