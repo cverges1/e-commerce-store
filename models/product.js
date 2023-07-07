@@ -24,7 +24,10 @@ Product.init(
     on_sale_price: {
       type: DataTypes.STRING,
     },
-    product_image: {
+    arrival: {
+      type: DataTypes.BOOLEAN,
+    },
+    image: {
       type: DataTypes.STRING,
     },
     category_id: {
@@ -41,12 +44,15 @@ Product.init(
         model: "merchant",
         key: "id",
       },
-    }},{
+    },
+  },
+  {
     sequelize: connection,
     timestamps: false,
     underscored: true,
     freezeTableName: true,
     modelName: "product",
-  });
+  }
+);
 
 module.exports = Product;
