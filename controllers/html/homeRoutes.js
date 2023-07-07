@@ -6,65 +6,93 @@ const { User, Category, Product } = require("../../models");
 // End point is /
 router.get("/", async (req, res) => {
   try {
+    // variable to gather all categories and products associated with them
     const categoryData = await Category.findAll({
       include: [{ model: Product }],
     });
+    // variable to gather categories and products with no metadata
     const serializedCategories = categoryData.map((category) =>
       category.get({ plain: true })
     );
     // console.log(serializedCategories);
 
-    let serializedCategory = [];
+    // setup Array to gather each individual products w/ for loop below to push
+    let serializedProductsbyCategory = [];
 
-    for (let i=0; i<serializedCategories.length; i++) {
-      serializedCategory.push(serializedCategories[i])
+    for (let i = 0; i < serializedCategories.length; i++) {
+      serializedProductsbyCategory.push(serializedCategories[i].products);
     }
 
-    // console.log(serializedCategory[1].products);
+    // console.log("serializedProductsbyCategory", serializedProductsbyCategory);
 
-    let serializedProducts = [];
+    // setup Array to gather each individual product w/ for loop below to push
+    const foodProducts = serializedProductsbyCategory[0];
+    const toys = serializedProductsbyCategory[1];
+    const leashes = serializedProductsbyCategory[2];
+    const beds = serializedProductsbyCategory[3];
 
-    for (let i=0; i<serializedCategory.length; i++) {
-      serializedProducts.push(serializedCategory[i].products)
-    }
+    // console.log("foodProducts", foodProducts);
+    // console.log("toys", toys);
+    // console.log("leashes", leashes);
+    // console.log("beds", beds);
 
-    // console.log(serializedProducts[1]);
-
-   let betterProductsArr = serializedProducts[1];
-
+    // setup Arrays to gather each sale products and new arrivals w/ for loop below to push
     let saleProducts = [];
     let newProducts = [];
 
-    console.log(betterProductsArr);
-
-    for (let i=0; i<betterProductsArr.length; i++) {
-
-
-      if(betterProductsArr[1].on_sale_price) {
-        saleProducts.push(betterProductsArr[i])
+    for (let i = 0; i < foodProducts.length; i++) {
+      if (foodProducts[i].arrival === true) {
+        newProducts.push(foodProducts[i]);
       }
 
-      if (betterProductsArr[i].arrival === true) {
-        newProducts.push(betterProductsArr[i])
+      if (foodProducts[i].on_sale_price) {
+        saleProducts.push(foodProducts[i]);
+      }
+    }
+
+    for (let i = 0; i < toys.length; i++) {
+      if (toys[i].arrival === true) {
+        newProducts.push(toys[i]);
+      }
+
+      if (toys[i].on_sale_price) {
+        saleProducts.push(toys[i]);
+      }
+    }
+
+    for (let i = 0; i < leashes.length; i++) {
+      if (leashes[i].arrival === true) {
+        newProducts.push(leashes[i]);
+      }
+
+      if (leashes[i].on_sale_price) {
+        saleProducts.push(leashes[i]);
+      }
+    }
+
+    for (let i = 0; i < beds.length; i++) {
+      if (beds[i].arrival === true) {
+        newProducts.push(beds[i]);
+      }
+
+      if (beds[i].on_sale_price) {
+        saleProducts.push(beds[i]);
       }
     }
 
     console.log("on sale", saleProducts);
     console.log("new arrival", newProducts);
 
-    res
-
-      .status(200)
-      .render(
-        'homepage', { 
-          allCategories: serializedCategories, 
-          singleCategory: serializedCategory,
-          allProducts: betterProductsArr,
-          saleProducts: saleProducts,
-          newProducts: newProducts,
-          loggedIn: req.session.loggedIn,
-        });
-
+    res.status(200).render("homepage", {
+      allCategories: serializedCategories,
+      foodProducts: foodProducts,
+      toys: toys,
+      leashes: leashes,
+      beds: beds,
+      saleProducts: saleProducts,
+      newProducts: newProducts,
+      loggedIn: req.session.loggedIn,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
@@ -88,11 +116,10 @@ router.get("/category/:id", async (req, res) => {
     // TODO: MODIFY WHERE THIS IS RENDERING
     res
       // .status(200)
-      .render(
-        'homepage', { 
-          category: serializedCategory, 
-          loggedIn: req.session.loggedIn,
-        });
+      .render("homepage", {
+        category: serializedCategory,
+        loggedIn: req.session.loggedIn,
+      });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
@@ -112,13 +139,10 @@ router.get("/product/:id", async (req, res) => {
     console.log(serializedProduct);
 
     // TODO: MODIFY WHERE THIS IS RENDERING
-    res
-      .status(200)
-      .render(
-        'homepage', { 
-          productData: serializedProduct, 
-          loggedIn: req.session.loggedIn,
-        });
+    res.status(200).render("homepage", {
+      productData: serializedProduct,
+      loggedIn: req.session.loggedIn,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
@@ -135,7 +159,7 @@ router.get("/signup", async (req, res) => {
     return;
   }
   // TODO: modify response with actual VIEW|template go to sign up page
-  res.status(200).render('signUp');
+  res.status(200).render("signUp");
 });
 
 // Render login page
@@ -148,7 +172,7 @@ router.get("/login", async (req, res) => {
     return;
   }
   // TODO: modify response with actual VIEW|template go to login page
-  res.status(200).render('signIn');
+  res.status(200).render("signIn");
 });
 
 module.exports = router;
