@@ -1,22 +1,22 @@
 {{#each saleProducts as |Product|}}
 <div>
-    <a href="">
+    <a href="#">
         <div>
             <img src="/images/{{Product.}}" alt="">
-            <p>{{Product.}}</p>
-            <p>{{Product.}}</p>
+            <p>{{Product.name}}</p>
+            <p>{{Product.price}}</p>
         </div>
     </a>
 </div>
 {{/each}}
 
-{{#each serializedCategories as |Categories|}}
+{{#each categories as |Category|}}
 <div>
-    <a href="">
+    <a href="#">
         <div>
             <img src="" alt="">
-            <p>{{Product.}}</p>
-            <p>{{Product.}}</p>
+            <p>{{Category.name}}</p>
+            <p>{{Category.image}}</p>
         </div>
     </a>
 </div>
@@ -24,11 +24,11 @@
 
 {{#each newProducts as |Product|}}
 <div>
-    <a href="">
+    <a href="#">
         <div>
-            <img src="" alt="">
-            <p>{{Product.}}</p>
-            <p>{{Product.}}</p>
+            <img src="#" alt="">
+            <p>{{Product.name}}</p>
+            <p>{{Product.price}}</p>
         </div>
     </a>
 </div>
