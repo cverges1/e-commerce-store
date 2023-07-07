@@ -41,23 +41,23 @@ User.init(
     },
     shipping_address: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     billing_address: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     payment_info: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     funds: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     is_admin: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      allowNull: true,
     },
     merchant_id: {
       type: DataTypes.INTEGER,
