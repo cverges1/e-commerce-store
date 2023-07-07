@@ -59,6 +59,7 @@ router.get("/products", async (req, res) => {
     // HOMEPAGE WITH CATEGORIES AND PRODUCTS
     // TODO: modify response with actual VIEW|template replace .send with .render
     res
+
       .status(200)
       .render(
         'homepage', { 
@@ -66,6 +67,7 @@ router.get("/products", async (req, res) => {
           newProduct: newProduct,
           loggedIn: req.session.loggedIn,
         });
+
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
