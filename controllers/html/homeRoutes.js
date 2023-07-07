@@ -85,7 +85,7 @@ router.get("/category/:id", async (req, res) => {
     const serializedCategory = categoryData.get({ plain: true });
     console.log(serializedCategory);
 
-    // TODO: modify response with actual VIEW|template replace .send with .render
+    // TODO: MODIFY WHERE THIS IS RENDERING
     res
       // .status(200)
       .render(
@@ -111,7 +111,7 @@ router.get("/product/:id", async (req, res) => {
     const serializedProduct = productData.get({ plain: true });
     console.log(serializedProduct);
 
-    // TODO: modify response with actual VIEW|template single product page replace .send with .render
+    // TODO: MODIFY WHERE THIS IS RENDERING
     res
       .status(200)
       .render(
