@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
     // HOMEPAGE WITH CATEGORIES AND PRODUCTS
     // TODO: modify response with actual VIEW|template replace .send with .render
     res
-      .status(200)
+      // .status(200)
       .render(
         'homepage', { 
           categories: serializedCategories, 
@@ -60,7 +60,7 @@ router.get("/products", async (req, res) => {
     // TODO: modify response with actual VIEW|template replace .send with .render
     res
 
-      .status(200)
+      // .status(200)
       .render(
         'homepage', { 
           saleProducts: saleProducts, 
@@ -90,7 +90,7 @@ router.get("/category/:id", async (req, res) => {
 
     // TODO: modify response with actual VIEW|template replace .send with .render
     res
-      .status(200)
+      // .status(200)
       .render(
         'homepage', { 
           category: serializedCategory, 
