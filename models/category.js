@@ -13,7 +13,12 @@ Category.init({
   name: {
     type: DataTypes.STRING,
     allowNull: false,
-  }},{
+  },
+  image: {
+    type: DataTypes.STRING,
+  },
+},
+{
   sequelize: connection,
   timestamps: false,
   underscored: true,
