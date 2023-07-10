@@ -2,7 +2,7 @@ const router = require("express").Router();
 // import helper function for authentication
 const withAuth = require("../../utils/auth");
 
-const { User, Product, Category, Transaction, Order } = require("../../models");
+const { Order } = require("../../models");
 
 /***** CREATE *****/
 // Route to create a new order

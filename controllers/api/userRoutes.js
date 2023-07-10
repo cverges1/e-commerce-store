@@ -1,7 +1,7 @@
 const router = require("express").Router();
 // import our db connection for the SQL literals
 const sequelize = require("../../config/connection");
-const { User, Product, Category, Transaction } = require("../../models");
+const { User } = require("../../models");
 // import helper function for authentication
 const withAuth = require("../../utils/auth");
 // imports segment analytics
