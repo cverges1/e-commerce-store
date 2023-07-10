@@ -4,7 +4,7 @@ const sequelize = require('../../config/connection');
 const { Product } = require('../../models');
 
 //post a new product
-router.post('./product', async (req, res) => {
+router.post('./product', withAuth, async (req, res) => {
     try {
         const newProduct = await User.create({
             id: req.body.id,

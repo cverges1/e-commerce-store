@@ -12,8 +12,7 @@ router.post("/", withAuth, async (req, res) => {
     try {
         //create new category
         const newCategory = await User.create({
-            name: req.body.name,
-            id: req.body,id
+            name: req.body.name
         });
         res.status(201).json(newCategory);
     } catch (error) {
@@ -47,9 +46,8 @@ router.put("/", withAuth, async (req, res) => {
       const updateCategory = await Category.update(req.body, {
         where: {
           // since only logged in users can update their profile, id will come from req.session.userId
-          name: req.session.name
+          name: req.body.name
         },
-        individualHooks: true,
       });
   
       // if no user was updated, let client know the user was not found
