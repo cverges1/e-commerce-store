@@ -1,18 +1,13 @@
 const router = require('express').Router();
 //import our db connection for the sql literals
 const sequelize = require("../../config/connection");
-const { Category, Product, User, Transaction } = require('../../models');
+const { Category } = require('../../models');
 //import help function for authentication
 const withAuth = require("../../utils/auth");
-//import segment analytics
-const {Analytics} = require("@segment/analytics-node");
-const analytics = new Analytics({
-    writeKey : "fCvCtaAKBxvdEqrQ2WHlAT1jrsRT5eks",
-});
 
 //CREATE
 // ROUTE TO POST NEW CATEGORY
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
     console.log("req.body", req.body);
     try {
         //create new category
@@ -20,19 +15,31 @@ router.post("/", async (req, res) => {
             name: req.body.name,
             id: req.body,id
         });
-        //save new session to db
-    req.session.save(() => {
-        // create session variables based on the newly signed up category
-        (req.session.id = newCategory.id);
-        res.status(201).json(newCategory); // 201 - Created
-      });
-
+        res.status(201).json(newCategory);
     } catch (error) {
         console.log(error);
         res.status(500).json(error); // 500 - Internal Server Error
     }
-})
+});
 
+//RETRIEVE
+  //get method for category
+  router.get('/', withAuth, async (req, res) => {
+    console.log("req.body", req.body)
+    try {
+      const getCategory = await Category.findAll({
+        attributes: {
+          include: ['id', 'name']
+        }
+      });
+      res.status(200).json(getCategory); // 200 - OK
+
+    } catch (error) {
+      console.log(error);
+        req.statusCode(500).json(error); //500 internal server error
+    }
+  });
+//REPLACE
 //put method to replace category
 router.put("/", withAuth, async (req, res) => {
     try {
@@ -40,7 +47,7 @@ router.put("/", withAuth, async (req, res) => {
       const updateCategory = await Category.update(req.body, {
         where: {
           // since only logged in users can update their profile, id will come from req.session.userId
-          name: req.session.name,
+          name: req.session.name
         },
         individualHooks: true,
       });
@@ -55,7 +62,7 @@ router.put("/", withAuth, async (req, res) => {
       res.status(500).json(error); // 500 - Internal Server Error
     }
   });
-
+//DESTROY!
   //delete method to remove category
   router.delete("/", withAuth, async (req, res) => {
     try {
