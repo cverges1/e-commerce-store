@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const sequelize = require("../../config/connection");
-const authentication = require('"../../utils/auth"');
+const withAuth = require("../../utils/auth");
 const { Payment } = require('../../models');
 //retrieve
 //route to get customer payment
-router.get('/payment', authentication, async (req, res) => {
+router.get('/payment', withAuth, async (req, res) => {
     console.log("req.body", req.body);
     try {
         const getPayment = await Payment.findAll({
@@ -21,7 +21,7 @@ router.get('/payment', authentication, async (req, res) => {
 });
 
 //post method for payment
-    router.post('/payment', authentication ,async (req, res) => {
+    router.post('/payment', withAuth ,async (req, res) => {
             console.log('req.body', req.body);
             try {
               const newPayment = await Payment.create({
