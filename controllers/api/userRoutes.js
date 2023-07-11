@@ -7,7 +7,7 @@ const withAuth = require("../../utils/auth");
 // imports segment analytics
 const { Analytics } = require("@segment/analytics-node");
 const analytics = new Analytics({
-  writeKey: "fCvCtaAKBxvdEqrQ2WHlAT1jrsRT5eks",
+  writeKey: process.env.WRITE,
 });
 
 /***** CREATE *****/

@@ -16,7 +16,7 @@ const { Analytics } = require('@segment/analytics-node');
 
 const routes = require('./controllers');
 
-const analytics = new Analytics({ writeKey: 'fCvCtaAKBxvdEqrQ2WHlAT1jrsRT5eks'});
+const analytics = new Analytics({ writeKey: process.env.WRITE});
 
 const app = express();
 const PORT = process.env.PORT || 3001;
