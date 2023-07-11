@@ -1,37 +1,44 @@
-{{#each saleProducts as |Product|}}
-<div id="container">
-    <a href="#">
-        <div class="item">
-            {{!-- <img src="/images/{{Product.}}" alt=""> --}}
-            <div id="div1-test-image"></div>
-            <p>{{Product.name}}</p>
-            <p>{{Product.price}}</p>
+<div class="flex-column">
+    <section>
+        <h4>Sale</h4>
+        {{#each saleProducts as |Product|}}
+        <div id="container">
+            <a href="#">
+                <div class="item">
+                    <img src="{{Product.image}}" alt="">
+                    <div id="div1-test-image"></div>
+                    <p>{{Product.name}}</p>
+                    <p>{{Product.price}}</p>
+                </div>
+            </a>
         </div>
-    </a>
-</div>
-{{/each}}
+        {{/each}}
+    </section>
 
-{{!-- {{#each categories as |Category|}}
-<div>
-    <a href="#">
-        <div>
-            <img src="" alt="">
-            <p>{{Category.name}}</p>
-            <p>{{Category.image}}</p>
-        </div>
-    </a>
-</div>
-{{/each}} --}}
+    <section>
+        <h3>Categories</h3>
+        {{#each allCategories as |Category|}}
+            <a href="#">
+                <div>
+                    <img src="{{Category.image}}" alt="">
+                    <p>{{Category.name}}</p>
+                </div>
+            </a>
+        {{/each}}
+    </section>
 
-{{#each newProducts as |Product|}}
-<div>
-    <a href="#">
-        <div>
-            {{!-- <img src="#" alt=""> --}}
-            <div id="div-2-test-image"></div>
-            <p>{{Product.name}}</p>
-            <p>{{Product.price}}</p>
-        </div>
-    </a>
+    <section>
+        <h4>New Arrivals</h4>
+        {{#each newProducts as |Product|}}
+            <a href="#">
+                <div>
+                    {{!-- <img src="#" alt=""> --}}
+                    <div id="div-2-test-image"></div>
+                    <p>{{Product.name}}</p>
+                    <p>{{Product.price}}</p>
+                </div>
+            </a>
+        {{/each}}
+    </section>
+
 </div>
-{{/each}}

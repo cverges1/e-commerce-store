@@ -62,3 +62,16 @@
   background-color: grey;
   border-radius: 10px;
 }
+
+section {
+  border: 1px solid black;
+}
+
+img {
+  max-width: 200px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
