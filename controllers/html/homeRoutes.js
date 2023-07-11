@@ -80,8 +80,23 @@ router.get("/", async (req, res) => {
       }
     }
 
-    console.log("on sale", saleProducts);
-    console.log("new arrival", newProducts);
+    console.log("all on sale", saleProducts);
+    console.log("all new arrival", newProducts);
+
+    for (let i = 0; i < saleProducts.length; i++) {
+      if (saleProducts.length > 4) {
+        saleProducts.splice([i], 1);
+      }
+    }
+
+    for (let i = 0; i < newProducts.length; i++) {
+      if (newProducts.length > 4) {
+        newProducts.splice([i], 1);
+      }
+    }
+
+    console.log("on sale 4", saleProducts);
+    console.log("new arrival 4", newProducts);
 
     res.status(200).render("homepage", {
       allCategories: serializedCategories,
