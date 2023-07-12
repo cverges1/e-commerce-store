@@ -1,12 +1,20 @@
-<div>
+<div class="wrapper-div flex-column w-50 align-items-center justify-content-center">
     <p>Sign in to your account</p>
-    <form action="">
-        <input type="text">
-        <input type="password">
+    <form id="sign-in-form">
+        <div class="flex-column">
+            <label for="sign-in-email">Email:</label>
+            <input id="sign-in-email" type="text" placeholder="">
+        </div>
+        <div class="flex-column">
+            <label for="sign-in-password">Password:</label>
+            <input id="sign-in-password" type="password" placeholder="">
+        </div>
+        <button type="submit">SIGN IN</button>
     </form>
-    <button>SIGN IN</button>
     <div>
         <p>Don't Have An Account Yet?</p>
-        <p>REGISTER</p>
+        <a href="/signup"><p>REGISTER</p></a>
     </div>
 </div> 
+
+<script src="/js/signin.js"></script>

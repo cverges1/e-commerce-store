@@ -59,7 +59,7 @@
 #div-2-test-image {
   width: 200px;
   height: 300px;
-  background-color: grey;
+  background-color: #FAFAFA;
   border-radius: 10px;
 }
 
@@ -74,4 +74,39 @@ img {
 .flex-column {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.wrapper-div {
+  margin: auto;
+}
+
+.red-error {
+  color: red;
 }

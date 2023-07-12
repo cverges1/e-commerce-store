@@ -98,6 +98,8 @@ router.get("/", async (req, res) => {
     console.log("on sale 4", saleProducts);
     console.log("new arrival 4", newProducts);
 
+    console.log(req.session);
+
     res.status(200).render("homepage", {
       allCategories: serializedCategories,
       foodProducts: foodProducts,
@@ -112,6 +114,7 @@ router.get("/", async (req, res) => {
     console.log(error);
     res.status(500).json(error);
   }
+
 });
 
 // Render single category with products in that category
@@ -128,12 +131,21 @@ router.get("/category/:id", async (req, res) => {
     const serializedCategory = categoryData.get({ plain: true });
     console.log(serializedCategory);
 
+    // setup Array to gather each individual products w/ for loop below to push
+    let serializedProductsbyCategory = [];
+
+    for (let i = 0; i < serializedCategory.length; i++) {
+      serializedProductsbyCategory.push(serializedCategory[i].products);
+    }
+
     // TODO: MODIFY WHERE THIS IS RENDERING
+    console.log(serializedProductsbyCategory);
     res
       // .status(200)
-      .render("homepage", {
+      .render("individualCategory", {
         category: serializedCategory,
         loggedIn: req.session.loggedIn,
+        categoryProducts: serializedCategory.products,
       });
   } catch (error) {
     console.log(error);
@@ -154,7 +166,7 @@ router.get("/product/:id", async (req, res) => {
     console.log(serializedProduct);
 
     // TODO: MODIFY WHERE THIS IS RENDERING
-    res.status(200).render("homepage", {
+    res.status(200).render("singleProduct", {
       productData: serializedProduct,
       loggedIn: req.session.loggedIn,
     });

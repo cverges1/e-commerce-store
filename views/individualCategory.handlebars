@@ -1,10 +1,11 @@
-{{#each serializedCategory as |Product|}}
+{{#each categoryProducts as |Product|}}
 <div>
-    <a href="">
+    <a href="/product/{{Product.id}}">
         <div>
-            <img src="/images/{{Product.}}" alt="">
+            <img src="{{Product.image}}" alt="">
             <p>{{Product.name}}</p>
             <p>{{Product.price}}</p>
+
         </div>
     </a>
 </div>

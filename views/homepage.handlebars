@@ -1,24 +1,26 @@
-<div class="flex-column">
-    <section>
+<div class="flex-column ">
+    <section class="flex-column">
         <h4>Sale</h4>
-        {{#each saleProducts as |Product|}}
-        <div id="container">
-            <a href="#">
-                <div class="item">
-                    <img src="{{Product.image}}" alt="">
-                    <div id="div1-test-image"></div>
-                    <p>{{Product.name}}</p>
-                    <p>{{Product.price}}</p>
-                </div>
-            </a>
+        <div class="flex-row w-100 justify-around">
+            {{#each saleProducts as |Product|}}
+            <div id="container">
+                <a href="/product/{{Product.id}}">
+                    <div class="item">
+                        <img src="{{Product.image}}" alt="">
+                        <div id="div1-test-image"></div>
+                        <p>{{Product.name}}</p>
+                        <p>{{Product.price}}</p>
+                    </div>
+                </a>
+            </div>
+            {{/each}}
         </div>
-        {{/each}}
     </section>
 
-    <section>
+    <section class="flex-row">
         <h3>Categories</h3>
         {{#each allCategories as |Category|}}
-            <a href="#">
+            <a href="/category/{{Category.id}}">
                 <div>
                     <img src="{{Category.image}}" alt="">
                     <p>{{Category.name}}</p>
@@ -27,10 +29,10 @@
         {{/each}}
     </section>
 
-    <section>
+    <section class="flex-row">
         <h4>New Arrivals</h4>
         {{#each newProducts as |Product|}}
-            <a href="#">
+            <a href="/product/{{Product.id}}">
                 <div>
                     {{!-- <img src="#" alt=""> --}}
                     <div id="div-2-test-image"></div>
