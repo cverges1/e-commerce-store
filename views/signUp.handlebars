@@ -1,12 +1,31 @@
-<div>
+<div class="wrapper-div flex-column w-50 align-items-center justify-content-center">
     <p>Create Account</p>
-    <form action="">
-        <input type="text">
-        <input type="password">
+    <form id="sign-up-form">
+        <div class="flex-column">
+            <label for="sign-up-first-name">First Name:</label>
+            <input id="sign-up-first-name" type="text" placeholder="">
+        </div>
+        <div class="flex-column">
+            <label for="sign-up-last-name">Last Name:</label>
+            <input id="sign-up-last-name" type="text" placeholder="">
+        </div>
+        <div class="flex-column">
+            <label for="sign-up-email">Email:</label>
+            <input id="sign-up-email" type="email" placeholder="">
+        </div>
+        <div class="flex-column">
+            <label for="sign-up-password">Password:</label>
+            <input id="sign-up-password" type="password" placeholder="">
+        </div>
+        <button type="submit">SIGN UP</button>
     </form>
-    <button>SIGN IN</button>
+    <div id="error" class="red-error">
+
+    </div>
+
     <div>
-        <p>Don't Have An Account Yet?</p>
-        <p>REGISTER</p>
+        
     </div>
 </div> 
+
+<script src="/js/signup.js"></script>

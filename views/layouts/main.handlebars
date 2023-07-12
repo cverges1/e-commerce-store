@@ -3,29 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Happy Tails</title>
     <link rel="stylesheet" href="/css/jass.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header id="nav-wrapper">
-    <nav id="nav">
-        <div class="navbar-left">
-        <a href="#" id="test">Happy Tails</a>
-        </div>
-        <div class="navbar-right">
-        <ul>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Shopping Cart</a></li>
-        </ul>
-        </div>
-    </nav>
+        <nav id="nav">
+            <div class="navbar-left">
+            <a href="/" id="test">Happy Tails</a>
+            </div>
+            <div class="navbar-right">
+            
+            <ul>
+                {{#if loggedIn}}
+                <li id="logout"><a href="#">Logout</a></li>
+                <li><a href="#">Shopping Cart</a></li>
+                
+                {{else}}
+                <li><a href="/signup">Sign Up</a></li>
+                <li><a href="/login">Login</a></li>
+                {{/if}}
+                
+                
+            </ul>
+            </div>
+        </nav>
     </header>
-
     {{{body}}}
-
     <footer>
 
     </footer>
 </body>
+<script src="/js/logout.js"></script>
 </html>
