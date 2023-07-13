@@ -18,9 +18,8 @@ router.post('./product', withAuth, async (req, res) => {
         req.status(500).json(error);
     }
 });
-//TO DO: create a get method for reviewing a product
+//TO DO: create a get method for all products
 router.get('./product', withAuth, async (req, res) => {
-    console.log("req.body", req.body);
     try {
         const getProduct = await Product.findAll({
         attributes: {
@@ -57,7 +56,7 @@ try {
 }
 });
 
-//to do: create a delete method to remove a product
+//A delete method to remove a product
 router.delete('./product', withAuth, async (req, res) => {
 try {
     const deleteProduct = await Product.destroy({
