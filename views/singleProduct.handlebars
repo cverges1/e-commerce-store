@@ -8,12 +8,13 @@
     <div class="wrapper-div">
       <div>
         <p id='product-title'>{{productData.name}}</p>
+        <p id="product-price">{{productData.price}}</p>
         <div class="flex-row">
           <div id="whole-quantity-box">
             <div id='quantity-box'>
-              <button class='quantity-btn'>-</button>
+              <button class='quantity-btn' id="subtract-btn">-</button>
               <p class='quantity-value'>1</p>
-              <button class='quantity-btn'>+</button>
+              <button class='quantity-btn' id="add-btn">+</button>
             </div>
           </div>
           <div id='add-to-cart-btn-div'>
@@ -38,3 +39,4 @@
     </div>
   </div>
 </section>
+<script src="/js/quantitybtn.js"></script>
