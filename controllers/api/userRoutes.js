@@ -204,7 +204,7 @@ router.post("/login", async (req, res) => {
     const user = await User.findOne({
       where: { email: req.body.email },
     });
-
+    
     // if no user found, send back response with 400 status code (stay vague)
     if (!user)
       return res
@@ -225,6 +225,8 @@ router.post("/login", async (req, res) => {
       req.session.userId = user.id;
       req.session.loggedIn = true;
       // send back response with 200 status code
+      req.session.name = user.first_name;
+  
       res.status(200).json(user); // 200 - OK
     });
   } catch (error) {

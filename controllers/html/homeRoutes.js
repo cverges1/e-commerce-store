@@ -92,6 +92,7 @@ router.get("/", async (req, res) => {
       saleProducts: saleProductsFour,
       newProducts: newProductsFour,
       loggedIn: req.session.loggedIn,
+      name: req.session.name,
     });
   } catch (error) {
     console.log(error);

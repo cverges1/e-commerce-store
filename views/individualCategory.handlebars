@@ -1,12 +1,11 @@
     <section id="category-section">
-        {{!-- Dynmically create cotegory title --}}
         <h4 class="category-title text-align-center">{{category.name}}</h4> 
-        <div class='flex-row w-100 justify-around'>
+        <div id="card-container" class='flex-row w-100 justify-around'>
             {{#each categoryProducts as |Product|}}
-                <div id="container">
+                <div id="card">
                 <a href='/product/{{Product.id}}'>
-                    <div>
-                    <img src='{{Product.image}}' alt='' />
+                    <div id="flex-div" class="flex-column">
+                    <img src='{{Product.image}}' alt='' class="product-img"/>
                     <p>{{Product.name}}</p>
                     <p>{{Product.price}}</p>
                     </div>

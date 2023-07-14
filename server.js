@@ -13,15 +13,12 @@ const hbs = exphbs.create({});
 const { Analytics } = require('@segment/analytics-node');
 
 
-
 const routes = require('./controllers');
 
 const analytics = new Analytics({ writeKey: process.env.WRITE});
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-//need to set up handlebars
 
 const sess = {
   secret: process.env.SECRET,

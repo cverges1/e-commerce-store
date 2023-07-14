@@ -1,3 +1,4 @@
+/* nav */
 #nav-wrapper {
   background-color: #f1f1f1;
   padding: 10px;
@@ -47,6 +48,9 @@
   background-color: #ddd;
 }
 
+
+
+/* random */
 .container {
   display: flex;
 }
@@ -67,9 +71,10 @@ section {
   /* border: 1px solid black; */
 }
 
-img {
+/* img {
   max-height: 200px;
-}
+  max-width: 210px;
+} */
 
 .flex-column {
   display: flex;
@@ -176,8 +181,29 @@ img {
 
 
 /* Left Column styling */
-#product-image {
-width: 350px;
-max-height: none;
+.product-img {
+  max-height: 200px;
+  max-width: 210px;
+  margin: auto;
+  object-fit: contain;
+}
+
+
+
+/* Individual category */
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#card {
+  width: calc(25% - 20px);
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
