@@ -139,7 +139,7 @@ router.get("/category/:id", async (req, res) => {
     }
 
     // TODO: MODIFY WHERE THIS IS RENDERING
-    console.log(serializedProductsbyCategory);
+    console.log(serializedCategory);
     res
       // .status(200)
       .render("individualCategory", {
