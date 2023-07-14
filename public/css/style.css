@@ -53,10 +53,12 @@
 /* random */
 .container {
   display: flex;
+  justify-content: center;
 }
 
 .item {
   float: left;
+  border: solid red 5px;
 }
 
 #div1-test-image,
@@ -86,6 +88,16 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-item {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.product-text {
+
 }
 
 .w-100 {
@@ -117,6 +129,7 @@ section {
   margin-top: 25px;
   margin-bottom: 25px;
   border-bottom: 1px solid black;
+  align-items: center;
 }
 
 /* #category-section {
@@ -184,10 +197,8 @@ section {
 .product-img {
   max-height: 200px;
   max-width: 210px;
-  margin: auto;
   object-fit: contain;
 }
-
 
 
 /* Individual category */

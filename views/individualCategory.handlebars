@@ -1,16 +1,16 @@
-    <section id="category-section">
-        <h4 class="category-title text-align-center">{{category.name}}</h4> 
-        <div id="card-container" class='flex-row w-100 justify-around'>
-            {{#each categoryProducts as |Product|}}
-                <div id="card">
-                <a href='/product/{{Product.id}}'>
-                    <div id="flex-div" class="flex-column">
-                    <img src='{{Product.image}}' alt='' class="product-img"/>
-                    <p>{{Product.name}}</p>
-                    <p>{{Product.price}}</p>
-                    </div>
-                </a>
-                </div>
-            {{/each}}
-        </div>
-    </section>
+<section class="product-section">
+  <h4 class="text-align-center">{{category.name}}</h4>
+  <div class="flex-row row-cols-4 w-100">
+    {{#each categoryProducts as |Product|}}
+      <div class="flex-item col">
+        <a href="/product/{{Product.id}}">
+          <img src="{{Product.image}}" alt="" class="product-img" />
+          <div class="product-text">
+            <p class="text-align-center">{{Product.name}}</p>
+            <p class="text-align-center">{{Product.price}}</p>
+          </div>
+        </a>
+      </div>
+    {{/each}}
+  </div>
+</section>
