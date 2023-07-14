@@ -15,7 +15,6 @@ const analytics = new Analytics({
 // POST method with endpoint '/api/users/'
 
 router.post("/", async (req, res) => {
-  console.log("req.body", req.body);
   try {
     // create new user
     const newUser = await User.create({
@@ -38,7 +37,7 @@ router.post("/", async (req, res) => {
       res.status(201).json(newUser); // 201 - Created
     });
 
-	//Analytics package used to gather user info upon user creation
+    //Analytics package used to gather user info upon user creation
     //TO DO CHANGE USER ID FROM BODY TO SESSION
     analytics.identify({
       userId: req.body.email,
@@ -51,7 +50,7 @@ router.post("/", async (req, res) => {
       },
     });
 
-	//Analytics package used to track creation of new users and any errors that might have occured
+    //Analytics package used to track creation of new users and any errors that might have occured
     //TO DO CHANGE USER ID FROM BODY TO SESSION
     analytics.track({
       userId: req.body.email,
@@ -110,7 +109,7 @@ router.get("/:userId", async (req, res) => {
   try {
     const user = await User.findByPk(req.params.userId, {
       attributes: {
-        exclude: ['password'],
+        exclude: ["password"],
       },
     });
 
@@ -194,7 +193,6 @@ router.delete("/:userId", async (req, res) => {
     res.status(500).json(error); // 500 - Internal Server Error
   }
 });
-
 
 /***** LOGIN *****/
 // Route to login an existing user
