@@ -119,6 +119,7 @@ router.get("/category/:id", async (req, res) => {
     for (let i = 0; i < serializedCategory.length; i++) {
       serializedProductsbyCategory.push(serializedCategory[i].products);
     }
+
     res
       .status(200)
       .render("individualCategory", {

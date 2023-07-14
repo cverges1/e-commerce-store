@@ -1,32 +1,40 @@
+<section id="single-product-section">
+  <div id='left-column'>
+    <img src='{{productData.image}}' alt='' id="product-image" />
+  </div>
 
-<div>
-    <div id="left-column">
-        <img src="{{productData.image}}" alt="">
-    </div>
+  <div id='right-column'>
 
-    <div id="right-column">
-        <div>
-            <p id="product-title">{{productData.name}}</p>
-            <div>
-                <div id="quantity-box">
-                    <button>-</button>
-                    <p>1</p>
-                    <button>+</button>
-                </div>
-                <div id="add-to-cart-btn-div">
-                    <button id="add-to-cart-btn">ADD TO CART</button>
-                </div>
+    <div class="wrapper-div">
+      <div>
+        <p id='product-title'>{{productData.name}}</p>
+        <div class="flex-row">
+          <div id="whole-quantity-box">
+            <div id='quantity-box'>
+              <button class='quantity-btn'>-</button>
+              <p class='quantity-value'>1</p>
+              <button class='quantity-btn'>+</button>
             </div>
+          </div>
+          <div id='add-to-cart-btn-div'>
+            <button id='add-to-cart-btn'>ADD TO CART</button>
+          </div>
         </div>
-
-        <div>
-            <p>DETAILS</p>
-            <p>{{productData.description}}</p>
-        </div>
-
-        <div>
-            <p>SHIPPING</p>
-            <p>Take advantage of our exclusive offer for dog lovers! Enjoy free standard shipping on your entire order with any purchase of dog products, such as dog food, toys, leashes/collars, or dog beds. For all other orders over $50, we provide free standard shipping as well. Rest assured, returns are hassle-free with free in-store returns. Some restrictions may apply. Shop now and give your furry friend the love they deserve, with the added benefit of free shipping!</p>
-        </div>
+      </div>
+      <div>
+        <p>DETAILS</p>
+        <p>{{productData.description}}</p>
+      </div>
+      <div>
+        <p>SHIPPING</p>
+        <p>Take advantage of our exclusive offer for dog lovers! Enjoy free
+          standard shipping on your entire order with any purchase of dog
+          products, such as dog food, toys, leashes/collars, or dog beds. For all
+          other orders over $50, we provide free standard shipping as well. Rest
+          assured, returns are hassle-free with free in-store returns. Some
+          restrictions may apply. Shop now and give your furry friend the love
+          they deserve, with the added benefit of free shipping!</p>
+      </div>
     </div>
-</div>
+  </div>
+</section>
