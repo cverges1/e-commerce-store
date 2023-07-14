@@ -1,3 +1,4 @@
+/* nav */
 #nav-wrapper {
   background-color: #f1f1f1;
   padding: 10px;
@@ -47,6 +48,9 @@
   background-color: #ddd;
 }
 
+
+
+/* random */
 .container {
   display: flex;
 }
