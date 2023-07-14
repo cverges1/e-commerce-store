@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const sequelize = require("../../config/connection");
-const { User, Category, Product } = require("../../models");
+const { Category, Product } = require("../../models");
 
 // Render homepage with all existing categories and products belonging to those categories
 // End point is /
@@ -14,7 +14,6 @@ router.get("/", async (req, res) => {
     const serializedCategories = categoryData.map((category) =>
       category.get({ plain: true })
     );
-    // console.log(serializedCategories);
 
     // setup Array to gather each individual products w/ for loop below to push
     let serializedProductsbyCategory = [];
@@ -23,18 +22,11 @@ router.get("/", async (req, res) => {
       serializedProductsbyCategory.push(serializedCategories[i].products);
     }
 
-    // console.log("serializedProductsbyCategory", serializedProductsbyCategory);
-
     // setup Array to gather each individual product w/ for loop below to push
     const foodProducts = serializedProductsbyCategory[0];
     const toys = serializedProductsbyCategory[1];
     const leashes = serializedProductsbyCategory[2];
     const beds = serializedProductsbyCategory[3];
-
-    // console.log("foodProducts", foodProducts);
-    // console.log("toys", toys);
-    // console.log("leashes", leashes);
-    // console.log("beds", beds);
 
     // setup Arrays to gather each sale products and new arrivals w/ for loop below to push
     let saleProducts = [];
@@ -80,25 +72,16 @@ router.get("/", async (req, res) => {
       }
     }
 
-    console.log("all on sale", saleProducts);
-    console.log("all new arrival", newProducts);
+    let saleProductsFour = [];
+    let newProductsFour = [];
 
-    for (let i = 0; i < saleProducts.length; i++) {
-      if (saleProducts.length > 4) {
-        saleProducts.splice([i], 1);
-      }
+    for (let i = 0; i < 4; i++) {
+      saleProductsFour.push(saleProducts[i])
     }
 
-    for (let i = 0; i < newProducts.length; i++) {
-      if (newProducts.length > 4) {
-        newProducts.splice([i], 1);
-      }
+    for (let i = 0; i < 4; i++) {
+      newProductsFour.push(newProducts[i]);
     }
-
-    console.log("on sale 4", saleProducts);
-    console.log("new arrival 4", newProducts);
-
-    console.log(req.session);
 
     res.status(200).render("homepage", {
       allCategories: serializedCategories,
@@ -106,8 +89,8 @@ router.get("/", async (req, res) => {
       toys: toys,
       leashes: leashes,
       beds: beds,
-      saleProducts: saleProducts,
-      newProducts: newProducts,
+      saleProducts: saleProductsFour,
+      newProducts: newProductsFour,
       loggedIn: req.session.loggedIn,
     });
   } catch (error) {
@@ -129,7 +112,6 @@ router.get("/category/:id", async (req, res) => {
       return res.status(404).json({ message: "No category found." });
 
     const serializedCategory = categoryData.get({ plain: true });
-    console.log(serializedCategory);
 
     // setup Array to gather each individual products w/ for loop below to push
     let serializedProductsbyCategory = [];
@@ -138,10 +120,8 @@ router.get("/category/:id", async (req, res) => {
       serializedProductsbyCategory.push(serializedCategory[i].products);
     }
 
-    // TODO: MODIFY WHERE THIS IS RENDERING
-    console.log(serializedCategory);
     res
-      // .status(200)
+      .status(200)
       .render("individualCategory", {
         category: serializedCategory,
         loggedIn: req.session.loggedIn,
@@ -163,7 +143,6 @@ router.get("/product/:id", async (req, res) => {
       return res.status(404).json({ message: "No product found." });
 
     const serializedProduct = productData.get({ plain: true });
-    console.log(serializedProduct);
 
     // TODO: MODIFY WHERE THIS IS RENDERING
     res.status(200).render("singleProduct", {

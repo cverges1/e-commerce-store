@@ -8,10 +8,9 @@ const withAuth = require("../../utils/auth");
 //CREATE
 // ROUTE TO POST NEW CATEGORY
 router.post("/", withAuth, async (req, res) => {
-    console.log("req.body", req.body);
     try {
         //create new category
-        const newCategory = await User.create({
+        const newCategory = await Category.create({
             name: req.body.name
         });
         res.status(201).json(newCategory);
@@ -24,7 +23,6 @@ router.post("/", withAuth, async (req, res) => {
 //RETRIEVE
   //get method for category
   router.get('/', withAuth, async (req, res) => {
-    console.log("req.body", req.body)
     try {
       const getCategory = await Category.findAll({
         attributes: {
@@ -67,8 +65,8 @@ router.put("/", withAuth, async (req, res) => {
       const deleteCategory = await Category.destroy({
         where: {
           // since only logged in users can delete their account, id will come from req.session.userId
-          id: req.session.id,
-          name: req.session.name
+          id: req.body.id,
+          name: req.body.name
         },
       });
   

@@ -45,7 +45,6 @@ router.get('/transaction/:id', async (req, res) => {
 		if (!transaction) return res.status(404).json({ message: 'No transaction found.' });
 
 		transaction = transaction.get({ plain: true });
-		console.log(transaction);
 		// TODO: modify response with actual VIEW|template
 		res
 			.status(200)
