@@ -1,49 +1,49 @@
-    <div>
-    <section class="product-section">
-        <h4 class="text-align-center">Sale</h4>
-        <div class='flex-row w-100 justify-around'>
-        {{#each saleProducts as |Product|}}
-            <div id='container'>
-            <a href='/product/{{Product.id}}'>
-                <div class='item'>
-                <img src='{{Product.image}}' alt='' class="product-img"/>
-                {{!-- <div id='div1-test-image'></div> --}}
-                <p>{{Product.name}}</p>
-                <p>{{Product.price}}</p>
-                </div>
-            </a>
+<div>
+  <section class="product-section">
+    <h4 class="text-align-center">On Sale</h4>
+    <div class="flex-row w-100">
+      {{#each saleProducts as |Product|}}
+        <div class="flex-item col">
+          <a href="/product/{{Product.id}}">
+            <img src="{{Product.image}}" alt="" class="product-img"/>
+            <div class="product-text">
+            <p class="text-align-center">{{Product.name}}</p>
+            <p class="text-align-center">{{Product.price}}</p>
             </div>
-        {{/each}}
+          </a>
         </div>
-    </section>
-
-    <section class="product-section">
-        <h4 class="text-align-center">Categories</h4>
-        <div class='flex-row w-100 justify-around'>
-        {{#each allCategories as |Category|}}
-            <a href='/category/{{Category.id}}'>
-            <div>
-                <img src='{{Category.image}}' alt='' class="product-img" />
-                {{!-- <p>{{Category.name}}</p> --}}
-            </div>
-            </a>
-        {{/each}}
-        </div>
-    </section>
-
-    <section class="product-section">
-        <h4 class="text-align-center">New Arrivals</h4>
-        <div class='flex-row w-100 justify-around'>
-            {{#each newProducts as |Product|}}
-            <a href='/product/{{Product.id}}'>
-                <div>
-                    <img src='{{Product.image}}' alt="" class="product-img">
-                    {{!-- <div id='div-2-test-image'></div> --}}
-                    <p>{{Product.name}}</p>
-                    <p>{{Product.price}}</p>
-                </div>
-            </a>
-            {{/each}}
-        </div>
-    </section>
+      {{/each}}
     </div>
+  </section>
+
+  <section class="product-section">
+    <h4 class="text-align-center">Categories</h4>
+    <div class="flex-row w-100 justify-around">
+      {{#each allCategories as |Category|}}
+        <a href="/category/{{Category.id}}">
+          <div>
+            <img src="{{Category.image}}" alt="" class="product-img" />
+            {{!-- <p>{{Category.name}}</p> --}}
+          </div>
+        </a>
+      {{/each}}
+    </div>
+  </section>
+
+  <div>
+  <section class="product-section">
+    <h4 class="text-align-center">On Sale</h4>
+    <div class="flex-row w-100">
+      {{#each newProducts as |Product|}}
+        <div class="flex-item col">
+          <a href="/product/{{Product.id}}">
+            <img src="{{Product.image}}" alt="" class="product-img"/>
+            <div class="text-bottom">
+            <p class="text-align-center">{{Product.name}}</p>
+            <p class="text-align-center">{{Product.price}}</p>
+            </div>
+          </a>
+        </div>
+      {{/each}}
+    </div>
+  </section>
