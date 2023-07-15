@@ -48,8 +48,6 @@
   background-color: #ddd;
 }
 
-
-
 /* random */
 .container {
   display: flex;
@@ -69,15 +67,6 @@
   border-radius: 10px;
 }
 
-section {
-  /* border: 1px solid black; */
-}
-
-/* img {
-  max-height: 200px;
-  max-width: 210px;
-} */
-
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -96,27 +85,6 @@ section {
   text-align: center;
 }
 
-.product-text {
-
-}
-
-.w-100 {
-  width: 100%;
-}
-
-
-.align-items-center {
-  align-items: center;
-}
-
-.justify-around {
-  justify-content: space-around;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
 .wrapper-div {
   margin: auto;
 }
@@ -132,31 +100,22 @@ section {
   align-items: center;
 }
 
-/* #category-section {
-  margin-top: 25px;
-} */
-
 .category-title {
-  /* text-align: center; */
   margin-top: 25px;
   margin-bottom: 25px;
 } 
 
-.text-align-center {
-  text-align: center;
-}
-
 /* Single Product */
 #single-product-section {
   display: flex;
-  width: 100vw; /* Set the width of the section to the full viewport width */
+  width: 100vw; 
 }
 
 #left-column {
   width: 50%;
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
+  justify-content: center; 
+  align-items: center; 
 }
 
 #right-column {
@@ -168,16 +127,30 @@ section {
   align-items: center;
   border: 1px solid black;
   border-radius: 4px;
-  padding: 5px;
+  padding: 5px;  
+  flex: 30%;
+  justify-content: center;
+}
+
+#add-to-cart-btn-div {
+  flex: 70%;
+}
+
+#add-to-cart-btn {
+  width: 100%;
+  padding: 9px;
+  background-color: black;
+  color: white;
+  border: none;
 }
 
 .quantity-btn {
-  width: 30px;
   height: 30px;
   background-color: transparent;
   border: 0px ;
   font-size: 16px;
   cursor: pointer;
+  
 }
 
 .quantity-value {
@@ -188,10 +161,24 @@ section {
   width: 60%
 }
 
+#top-section {
+  padding-bottom: 25px;
+  border-bottom: 1px solid black;
+  margin-bottom: 25px;
+}
+
+#mid-section {
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+#bottom-section {
+  margin-top: 25px;
+}
+
 .w-50 {
   width: 50%;
 }
-
 
 /* Left Column styling */
 .product-img {
@@ -202,7 +189,6 @@ section {
 
 
 /* Individual category */
-
 #card-container {
   display: flex;
   flex-wrap: wrap;
@@ -218,3 +204,23 @@ section {
   align-items: center;
 }
 
+/* Util class and ids */
+.w-100 {
+  width: 100%;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.text-align-center {
+  text-align: center;
+}
