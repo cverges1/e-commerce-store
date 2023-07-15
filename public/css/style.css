@@ -1,4 +1,4 @@
-/* nav */
+/* Nav bar */
 #nav-wrapper {
   background-color: #f1f1f1;
   padding: 10px;
@@ -48,7 +48,7 @@
   background-color: #ddd;
 }
 
-/* random */
+/* Random */
 .container {
   display: flex;
   justify-content: center;
@@ -111,13 +111,6 @@
   width: 100vw; 
 }
 
-#left-column {
-  width: 50%;
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-}
-
 #right-column {
   width: 50%;
 }
@@ -176,10 +169,6 @@
   margin-top: 25px;
 }
 
-.w-50 {
-  width: 50%;
-}
-
 /* Left Column styling */
 .product-img {
   max-height: 200px;
@@ -187,6 +176,12 @@
   object-fit: contain;
 }
 
+#left-column {
+  width: 50%;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
 
 /* Individual category */
 #card-container {
@@ -204,9 +199,13 @@
   align-items: center;
 }
 
-/* Util class and ids */
+/* Utility classes */
 .w-100 {
   width: 100%;
+}
+
+.w-50 {
+  width: 50%;
 }
 
 .align-items-center {
