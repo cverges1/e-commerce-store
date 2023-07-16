@@ -94,6 +94,31 @@ body {
   margin: 15px;
 }
 
+@media (max-width: 1024px) {
+  #responsive-cards,
+  #responsive-cardss {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #responsive-cards,
+  #responsive-cardss {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #responsive-cards,
+  #responsive-cardss {
+    flex-basis: 100%;
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 480px) {
   .flex-row .flex-item.col a {
     margin-right: 0;
