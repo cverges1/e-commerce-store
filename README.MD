@@ -16,9 +16,11 @@
   -[Questions](#questions)
 
   ## Website Preview
-  ![main-page](./images/updated-main.png)
-  ![single-product](./images/single-product.png)
-  ![sign-in](./images/sign-in-page.png)
+  ![main-page](./public/images/updated-main.png)
+  ![single-category](./public/images/single-category.png)
+  ![single-product](./public/images/single-product.png)
+  ![sign-in-page](./public/images/sign-in-page.png)
+  ![create-account](./public/images/create-account.png)
 
   ## Links
   - Github repo: https://github.com/cverges1/e-commerce-store
