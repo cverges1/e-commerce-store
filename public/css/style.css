@@ -104,6 +104,10 @@
   margin-bottom: 35px;
 }
 
+.top-title {
+  margin-top: 45px;
+}
+
 .product-name,
 .product-price {
   color: black;
@@ -112,6 +116,7 @@
 .product-name {
   margin-bottom: 10px;
   margin-top: 15px;
+
 }
 
 .product-a-tags {
@@ -126,6 +131,7 @@
 
 #right-column {
   width: 50%;
+  margin-top: 50px;
 }
 
 #quantity-box {
@@ -199,6 +205,7 @@
   display: flex;
   justify-content: center; 
   align-items: center; 
+  margin-top: 50px;
 }
 
 /* Individual category */
@@ -215,6 +222,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.category-title {
+  margin: 45px 0px 40px 0px;
+}
+
+.single-product-div {
+  margin-bottom: 50px;
 }
 
 /* Utility classes */
@@ -339,3 +354,110 @@ footer {
   flex-wrap: wrap;
 }
 
+/* Sign-in and Sign-up */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper-div {
+  margin-top: 100px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.red-error {
+  color: red;
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #6FB5B7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #5a9b9d;
+}
+
+button[type="submit"]:active {
+  background-color: #487d80;
+}
+
+.register-link {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.register-link p {
+  margin: 0;
+}
+
+.register-link a {
+  color: #6FB5B7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  color: #5a9b9d;
+}
+
+.register-link a:active {
+  color: #487d80;
+}
