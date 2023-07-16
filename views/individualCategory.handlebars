@@ -1,8 +1,8 @@
 <section class="product-section">
   <h2 class="text-align-center category-title">{{category.name}}</h2>
-  <div class="flex-row row-cols-4 w-100">
+  <div class="card-container">
     {{#each categoryProducts as |Product|}}
-      <div class="flex-item col single-product-div">
+      <div class="card">
         <a href="/product/{{Product.id}}" class="product-a-tags">
           <img src="{{Product.image}}" alt="" class="product-img" />
           <div class="product-text">
