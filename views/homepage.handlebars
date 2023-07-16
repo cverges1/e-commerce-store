@@ -1,14 +1,14 @@
 <div>
   <section class="product-section">
-    <h4 class="text-align-center">On Sale</h4>
+    <h4 class="text-align-center section-title">On Sale</h4>
     <div class="flex-row w-100">
       {{#each saleProducts as |Product|}}
         <div class="flex-item col">
-          <a href="/product/{{Product.id}}">
+          <a href="/product/{{Product.id}}" class="product-a-tags">
             <img src="{{Product.image}}" alt="" class="product-img"/>
             <div class="product-text">
-            <p class="text-align-center">{{Product.name}}</p>
-            <p class="text-align-center">{{Product.price}}</p>
+              <p class="text-align-center product-name">{{Product.name}}</p>
+              <p class="text-align-center product-price">{{Product.price}}</p>
             </div>
           </a>
         </div>
@@ -17,13 +17,12 @@
   </section>
 
   <section class="product-section">
-    <h4 class="text-align-center">Categories</h4>
+    <h4 class="text-align-center section-title">Categories</h4>
     <div class="flex-row w-100 justify-around">
       {{#each allCategories as |Category|}}
         <a href="/category/{{Category.id}}">
           <div>
             <img src="{{Category.image}}" alt="" class="product-img" />
-            {{!-- <p>{{Category.name}}</p> --}}
           </div>
         </a>
       {{/each}}
@@ -32,15 +31,15 @@
 
   <div>
   <section class="product-section">
-    <h4 class="text-align-center">On Sale</h4>
+    <h4 class="text-align-center section-title">On Sale</h4>
     <div class="flex-row w-100">
       {{#each newProducts as |Product|}}
         <div class="flex-item col">
-          <a href="/product/{{Product.id}}">
+          <a href="/product/{{Product.id}}" class="product-a-tags">
             <img src="{{Product.image}}" alt="" class="product-img"/>
             <div class="text-bottom">
-            <p class="text-align-center">{{Product.name}}</p>
-            <p class="text-align-center">{{Product.price}}</p>
+              <p class="text-align-center product-name">{{Product.name}}</p>
+              <p class="text-align-center product-price">{{Product.price}}</p>
             </div>
           </a>
         </div>
