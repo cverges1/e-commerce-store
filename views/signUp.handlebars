@@ -1,31 +1,25 @@
 <div class="wrapper-div flex-column w-50 align-items-center justify-content-center">
-    <p>Create Account</p>
-    <form id="sign-up-form">
-        <div class="flex-column">
-            <label for="sign-up-first-name">First Name:</label>
-            <input id="sign-up-first-name" type="text" placeholder="">
-        </div>
-        <div class="flex-column">
-            <label for="sign-up-last-name">Last Name:</label>
-            <input id="sign-up-last-name" type="text" placeholder="">
-        </div>
-        <div class="flex-column">
-            <label for="sign-up-email">Email:</label>
-            <input id="sign-up-email" type="email" placeholder="">
-        </div>
-        <div class="flex-column">
-            <label for="sign-up-password">Password:</label>
-            <input id="sign-up-password" type="password" placeholder="">
-        </div>
-        <button type="submit">SIGN UP</button>
-    </form>
-    <div id="error" class="red-error">
-
+  <h2>Create Account</h2>
+  <form id="sign-up-form">
+    <div class="form-group">
+      <label for="sign-up-first-name">First Name:</label>
+      <input id="sign-up-first-name" type="text" >
     </div>
-
-    <div>
-        
+    <div class="form-group">
+      <label for="sign-up-last-name">Last Name:</label>
+      <input id="sign-up-last-name" type="text">
     </div>
-</div> 
+    <div class="form-group">
+      <label for="sign-up-email">Email:</label>
+      <input id="sign-up-email" type="email">
+    </div>
+    <div class="form-group">
+      <label for="sign-up-password">Password:</label>
+      <input id="sign-up-password" type="password">
+    </div>
+    <button type="submit">SIGN UP</button>
+  </form>
+  <div id="error" class="red-error"></div>
+</div>
 
 <script src="/js/signup.js"></script>
