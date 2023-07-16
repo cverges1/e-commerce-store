@@ -16,7 +16,7 @@
   -[Questions](#questions)
 
   ## Website Preview
-  ![main-page](./images/main-page.png)
+  ![main-page](./images/updated-main.png)
   ![single-product](./images/single-product.png)
   ![sign-in](./images/sign-in-page.png)
 
