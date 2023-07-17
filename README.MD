@@ -24,7 +24,7 @@
 
   ## Links
   - Github repo: https://github.com/cverges1/e-commerce-store
-  - Heroku URL: 
+  - Heroku URL: https://happy-tails-pet-supply-e05726b13b79.herokuapp.com/
 
   ## Usage
   Users will only need a machine with connection to the internet and a list of supplies they might need for their furry friend.
