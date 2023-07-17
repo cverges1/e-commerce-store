@@ -1,0 +1,16 @@
+<section class="product-section">
+  <h2 class="text-align-center category-title">{{category.name}}</h2>
+  <div class="card-container">
+    {{#each categoryProducts as |Product|}}
+      <div class="card">
+        <a href="/product/{{Product.id}}" class="product-a-tags">
+          <img src="{{Product.image}}" alt="" class="product-img" />
+          <div class="product-text">
+            <p class="text-align-center product-name">{{Product.name}}</p>
+            <p class="text-align-center product-price">{{Product.price}}</p>
+          </div>
+        </a>
+      </div>
+    {{/each}}
+  </div>
+</section>

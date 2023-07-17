@@ -1,29 +1,104 @@
 const router = require("express").Router();
 const sequelize = require("../../config/connection");
-const { User, Category, Product } = require("../../models");
+const { Category, Product } = require("../../models");
 
 // Render homepage with all existing categories and products belonging to those categories
 // End point is /
 router.get("/", async (req, res) => {
   try {
+    // variable to gather all categories and products associated with them
     const categoryData = await Category.findAll({
       include: [{ model: Product }],
     });
+    // variable to gather categories and products with no metadata
     const serializedCategories = categoryData.map((category) =>
       category.get({ plain: true })
     );
-    console.log(serializedCategories);
-    // HOMEPAGE WITH CATEGORIES AND PRODUCTS
-    // TODO: modify response with actual VIEW|template replace .send with .render
-    res
-      .status(200).json(serializedCategories);
-      // .send(
-      //   "<h1>HOMEPAGE</h1><h2>Render the homepage view along with all categories retrieved.</h2>"
-      // );
+
+    // setup Array to gather each individual products w/ for loop below to push
+    let serializedProductsbyCategory = [];
+
+    for (let i = 0; i < serializedCategories.length; i++) {
+      serializedProductsbyCategory.push(serializedCategories[i].products);
+    }
+
+    // setup Array to gather each individual product w/ for loop below to push
+    const foodProducts = serializedProductsbyCategory[0];
+    const toys = serializedProductsbyCategory[1];
+    const leashes = serializedProductsbyCategory[2];
+    const beds = serializedProductsbyCategory[3];
+
+    // setup Arrays to gather each sale products and new arrivals w/ for loop below to push
+    let saleProducts = [];
+    let newProducts = [];
+
+    for (let i = 0; i < foodProducts.length; i++) {
+      if (foodProducts[i].arrival === true) {
+        newProducts.push(foodProducts[i]);
+      }
+
+      if (foodProducts[i].on_sale_price) {
+        saleProducts.push(foodProducts[i]);
+      }
+    }
+
+    for (let i = 0; i < toys.length; i++) {
+      if (toys[i].arrival === true) {
+        newProducts.push(toys[i]);
+      }
+
+      if (toys[i].on_sale_price) {
+        saleProducts.push(toys[i]);
+      }
+    }
+
+    for (let i = 0; i < leashes.length; i++) {
+      if (leashes[i].arrival === true) {
+        newProducts.push(leashes[i]);
+      }
+
+      if (leashes[i].on_sale_price) {
+        saleProducts.push(leashes[i]);
+      }
+    }
+
+    for (let i = 0; i < beds.length; i++) {
+      if (beds[i].arrival === true) {
+        newProducts.push(beds[i]);
+      }
+
+      if (beds[i].on_sale_price) {
+        saleProducts.push(beds[i]);
+      }
+    }
+
+    let saleProductsFour = [];
+    let newProductsFour = [];
+
+    for (let i = 0; i < 4; i++) {
+      saleProductsFour.push(saleProducts[i])
+    }
+
+    for (let i = 0; i < 4; i++) {
+      newProductsFour.push(newProducts[i]);
+    }
+
+    res.status(200).render("homepage", {
+      allCategories: serializedCategories,
+      foodProducts: foodProducts,
+      toys: toys,
+      leashes: leashes,
+      beds: beds,
+      saleProducts: saleProductsFour,
+      newProducts: newProductsFour,
+      loggedIn: req.session.loggedIn,
+      name: req.session.name,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
   }
+
 });
 
 // Render single category with products in that category
@@ -38,14 +113,21 @@ router.get("/category/:id", async (req, res) => {
       return res.status(404).json({ message: "No category found." });
 
     const serializedCategory = categoryData.get({ plain: true });
-    console.log(serializedCategory);
 
-    // TODO: modify response with actual VIEW|template replace .send with .render
+    // setup Array to gather each individual products w/ for loop below to push
+    let serializedProductsbyCategory = [];
+
+    for (let i = 0; i < serializedCategory.length; i++) {
+      serializedProductsbyCategory.push(serializedCategory[i].products);
+    }
+
     res
-      .status(200).json(serializedCategory);
-      // .send(
-      //   "<h1>SINGLE CATEGORY WITH PRODUCTS PAGE</h1><h2>Render the view for a CATEGORY along with the products retrieved.</h2>"
-      // );
+      .status(200)
+      .render("individualCategory", {
+        category: serializedCategory,
+        loggedIn: req.session.loggedIn,
+        categoryProducts: serializedCategory.products,
+      });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
@@ -62,14 +144,12 @@ router.get("/product/:id", async (req, res) => {
       return res.status(404).json({ message: "No product found." });
 
     const serializedProduct = productData.get({ plain: true });
-    console.log(serializedProduct);
 
-    // TODO: modify response with actual VIEW|template single product page replace .send with .render
-    res
-      .status(200).json(serializedProduct);
-      // .send(
-      //   "<h1>SINGLE PRODUCT PAGE</h1><h2>Render the view for a single PRODUCT</h2>"
-      // );
+    // TODO: MODIFY WHERE THIS IS RENDERING
+    res.status(200).render("singleProduct", {
+      productData: serializedProduct,
+      loggedIn: req.session.loggedIn,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
@@ -78,6 +158,7 @@ router.get("/product/:id", async (req, res) => {
 
 // Render signup page
 // End point is /signup
+// signUp
 router.get("/signup", async (req, res) => {
   if (req.session.logged_in) {
     // TODO: decide where to redirect users if they are logged in
@@ -85,11 +166,12 @@ router.get("/signup", async (req, res) => {
     return;
   }
   // TODO: modify response with actual VIEW|template go to sign up page
-  res.status(200).send("<h1>SIGN UP PAGE</h1><h2>Render the signup view.</h2>");
+  res.status(200).render("signUp");
 });
 
 // Render login page
 // End point is /login
+//signIn
 router.get("/login", async (req, res) => {
   if (req.session.logged_in) {
     // TODO: decide where to redirect users if they are logged in
@@ -97,7 +179,7 @@ router.get("/login", async (req, res) => {
     return;
   }
   // TODO: modify response with actual VIEW|template go to login page
-  res.status(200).send("<h1>LOGIN PAGE</h1><h2>Render the login view.</h2>");
+  res.status(200).render("signIn");
 });
 
 module.exports = router;

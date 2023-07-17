@@ -1,13 +1,13 @@
 const router = require("express").Router();
 // import our db connection for the SQL literals
 const sequelize = require("../../config/connection");
-const { User, Product, Category, Transaction } = require("../../models");
+const { User } = require("../../models");
 // import helper function for authentication
 const withAuth = require("../../utils/auth");
 // imports segment analytics
 const { Analytics } = require("@segment/analytics-node");
 const analytics = new Analytics({
-  writeKey: "fCvCtaAKBxvdEqrQ2WHlAT1jrsRT5eks",
+  writeKey: process.env.WRITE,
 });
 
 /***** CREATE *****/
@@ -15,7 +15,6 @@ const analytics = new Analytics({
 // POST method with endpoint '/api/users/'
 
 router.post("/", async (req, res) => {
-  console.log("req.body", req.body);
   try {
     // create new user
     const newUser = await User.create({
@@ -38,7 +37,7 @@ router.post("/", async (req, res) => {
       res.status(201).json(newUser); // 201 - Created
     });
 
-	//Analytics package used to gather user info upon user creation
+    //Analytics package used to gather user info upon user creation
     //TO DO CHANGE USER ID FROM BODY TO SESSION
     analytics.identify({
       userId: req.body.email,
@@ -51,7 +50,7 @@ router.post("/", async (req, res) => {
       },
     });
 
-	//Analytics package used to track creation of new users and any errors that might have occured
+    //Analytics package used to track creation of new users and any errors that might have occured
     //TO DO CHANGE USER ID FROM BODY TO SESSION
     analytics.track({
       userId: req.body.email,
@@ -110,7 +109,7 @@ router.get("/:userId", async (req, res) => {
   try {
     const user = await User.findByPk(req.params.userId, {
       attributes: {
-        exclude: ['password'],
+        exclude: ["password"],
       },
     });
 
@@ -205,7 +204,7 @@ router.post("/login", async (req, res) => {
     const user = await User.findOne({
       where: { email: req.body.email },
     });
-
+    
     // if no user found, send back response with 400 status code (stay vague)
     if (!user)
       return res
@@ -226,6 +225,8 @@ router.post("/login", async (req, res) => {
       req.session.userId = user.id;
       req.session.loggedIn = true;
       // send back response with 200 status code
+      req.session.name = user.first_name;
+  
       res.status(200).json(user); // 200 - OK
     });
   } catch (error) {

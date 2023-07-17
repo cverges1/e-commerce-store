@@ -1,14 +1,18 @@
 [
     {
-        "name": "Food"
+        "name": "Food",
+        "image": "https://images-na.ssl-images-amazon.com/images/G/01/img20/pets/Dog_Cat_Storefront/Dog_Tile_Food_440x440_ENG.jpg"
     },
     {
-        "name": "Toys"
+        "name": "Toys",
+        "image": "https://images-na.ssl-images-amazon.com/images/G/01/img20/pets/Dog_Cat_Storefront/Dog_Tile_Toys_440x440_ENG.jpg"
     },
     {
-        "name": "Leashes"
+        "name": "Leashes",
+        "image": "https://images-na.ssl-images-amazon.com/images/G/01/img20/pets/Dog_Cat_Storefront/Dog_Tile_Collar_Leashes_440x440_ENG.jpg"
     },
     {
-        "name": "Bed"
+        "name": "Bed",
+        "image": "https://images-na.ssl-images-amazon.com/images/G/01/img20/pets/Dog_Cat_Storefront/Dog_Tile_Bed_Furniture_440x440_ENG.jpg"
     }
 ]
