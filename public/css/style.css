@@ -94,6 +94,31 @@ body {
   margin: 15px;
 }
 
+@media (max-width: 1024px) {
+  #responsive-cards,
+  #responsive-cardss {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #responsive-cards,
+  #responsive-cardss {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #responsive-cards,
+  #responsive-cardss {
+    flex-basis: 100%;
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 480px) {
   .flex-row .flex-item.col a {
     margin-right: 0;
@@ -266,14 +291,14 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1450px) {
   .card {
     flex: 0 0 calc(50% - 30px);
     max-width: calc(50% - 30px);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
   .card {
     flex: 0 0 calc(100% - 30px);
     max-width: calc(100% - 30px);
