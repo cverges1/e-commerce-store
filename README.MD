@@ -2,9 +2,10 @@
   ## Licensing: MIT [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
+
 Welcome to our premier online store dedicated to fulfilling all your dog's needs. We understand the importance of finding the perfect supplies for your canine companion, and our website is designed to provide a convenient and high-quality shopping experience.
   
-  Elevator Pitch:
+Elevator Pitch:
 Is your furry best friend in need of a new dog bed or some engaging toys? Are you tired of spending hours searching for the right supplies? Look no further! Our website is specifically designed to cater to dog owners like you, providing a seamless online shopping experience. With a wide variety of categories and irresistible deals, you can find everything your four-legged friend needs right from the comfort of your home.
 
   ## Table of Contents
@@ -17,9 +18,11 @@ Is your furry best friend in need of a new dog bed or some engaging toys? Are yo
   -[Questions](#questions)
 
   ## Website Preview
-  ![main-page](./images/main-page.png)
-  ![single-product](./images/single-product.png)
-  ![sign-in](./images/sign-in-page.png)
+  ![main-page](./public/images/updated-main.png)
+  ![single-category](./public/images/single-category.png)
+  ![single-product](./public/images/single-product.png)
+  ![sign-in-page](./public/images/sign-in-page.png)
+  ![create-account](./public/images/create-account.png)
 
   ## Links
   - Github repo: https://github.com/cverges1/e-commerce-store
@@ -35,9 +38,9 @@ To explore and select products from the e-commerce store, follow these steps:
    - Click on the "Leashes" category to explore different leash options.
    - Click on the "Beds" category to browse through various pet beds.
    - Click on the "Toys" category to discover a range of entertaining toys for your furry friend.
-4. Review the product information, including descriptions, images, and pricing.
-5. Once you have decided on a product, click on it to view more details.
-6. To make a purchase, note down the desired product(s) and visit a physical store or use alternative purchasing methods.
+  4. Review the product information, including descriptions, images, and pricing.
+  5. Once you have decided on a product, click on it to view more details.
+  6. To make a purchase, note down the desired product(s) and visit a physical store or use alternative purchasing methods.
 
 Please note that the current version of the e-commerce store does not include a functional "Add to Cart" feature. The purpose of the store is to showcase the available products and provide information to users.
 
