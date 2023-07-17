@@ -21,19 +21,19 @@
         <div class='navbar-right'>
           <ul>
             {{#if loggedIn}}
-              <li id='logout'><a href='#'>Logout</a></li>
-              <li><a href='#'>Shopping Cart</a></li>
+              <li id='logout'><a href='#'>Logout</a></li> <!-- Logout link for logged-in users -->
+              <li><a href='#'>Shopping Cart</a></li> <!-- Shopping cart link for logged-in users -->
 
             {{else}}
-              <li><a href='/signup'>Sign Up</a></li>
-              <li><a href='/login'>Login</a></li>
+              <li><a href='/signup'>Sign Up</a></li> <!-- Sign Up link for non-logged-in users -->
+              <li><a href='/login'>Login</a></li> <!-- Login link for non-logged-in users -->
             {{/if}}
           </ul>
         </div>
       </nav>
     </header>
 
-    {{{body}}}
+    {{{body}}} <!-- Content placeholder -->
 
     <footer>
       <section id='email-sign-up' class='e-mail-signup'>

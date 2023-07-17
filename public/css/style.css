@@ -6,7 +6,14 @@ body {
   padding: 0;
 }
 
-/* Nav bar */
+:root {
+  --blue: #6fb5b7;
+  --blue-two: #5a9b9d;
+  --blue-three: #487d80;
+  --gray: #c2c3bd;
+}
+
+/* Nav-bar */
 #nav-wrapper {
   background-color: #f1f1f1;
   padding: 10px;
@@ -94,6 +101,7 @@ body {
   margin: 15px;
 }
 
+/* Media query for responsive cards */
 @media (max-width: 1024px) {
   #responsive-cards,
   #responsive-cardss {
@@ -139,10 +147,6 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-}
-
-.red-error {
-  color: red;
 }
 
 .category-title {
@@ -291,6 +295,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Media query for responsive category product cards */
 @media (max-width: 1450px) {
   .card {
     flex: 0 0 calc(50% - 30px);
@@ -375,7 +380,7 @@ input[type='password'] {
 button[type='submit'] {
   width: 100%;
   padding: 10px;
-  background-color: #6fb5b7;
+  background-color: var(--blue);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -385,11 +390,11 @@ button[type='submit'] {
 }
 
 button[type='submit']:hover {
-  background-color: #5a9b9d;
+  background-color: var(--blue-two);
 }
 
 button[type='submit']:active {
-  background-color: #487d80;
+  background-color: var(--blue-three);
 }
 
 .register-link {
@@ -402,17 +407,17 @@ button[type='submit']:active {
 }
 
 .register-link a {
-  color: #6fb5b7;
+  color: var(--blue);
   text-decoration: none;
   font-weight: bold;
 }
 
 .register-link a:hover {
-  color: #5a9b9d;
+  color: var(--blue-two);
 }
 
 .register-link a:active {
-  color: #487d80;
+  color: var(--blue-three);
 }
 
 /* Footer */
@@ -455,7 +460,7 @@ footer {
 }
 
 .email-box button {
-  background-color: #6fb5b7;
+  background-color: var(--blue);
   color: #fff;
   border: none;
   outline: none;
@@ -472,6 +477,7 @@ footer {
   margin: 64 93px;
 }
 
+/* Responsive footer media queries */
 @media (max-width: 1570px) {
   .footer-section {
     margin: 64px 40px;
@@ -496,7 +502,7 @@ footer {
 .section-list {
   list-style: none;
   padding: 0;
-  color: #c2c3bd;
+  color: var(--gray);
 }
 
 .footer-bottom {
@@ -512,7 +518,7 @@ footer {
 }
 
 .footer-a-tags {
-  color: #c2c3bd;
+  color: var(--gray);
 }
 
 /* Utility classes */

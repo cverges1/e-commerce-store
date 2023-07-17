@@ -1,29 +1,39 @@
 <section id='single-product-section'>
   <div id='left-column'>
+    <!-- Product Image -->
     <img src='{{productData.image}}' alt='' class='product-image' />
   </div>
 
   <div id='right-column'>
     <div class='wrapper-div'>
       <section id="top-section">
+        <!-- Product Title -->
         <h4 id='product-title'>{{productData.name}}</h4>
+        <!-- Product Price -->
         <p id='product-price'>{{productData.price}}</p>
         <div class='quan-add-div flex-row'>
           <div id='quantity-box'>
+            <!-- Quantity Subtraction Button -->
             <button class='quantity-btn' id='subtract-btn'>-</button>
+            <!-- Quantity Value -->
             <p class='quantity-value'>1</p>
+            <!-- Quantity Addition Button -->
             <button class='quantity-btn' id='add-btn'>+</button>
           </div>
           <div id='add-to-cart-btn-div'>
+            <!-- Add to Cart Button -->
             <button id='add-to-cart-btn'>ADD TO CART</button>
           </div>
         </div>
       </section>
       <section id="mid-section">
+        <!-- Details Section -->
         <h5>DETAILS</h5>
+        <!-- Product Description -->
         <p id="mid-details">{{productData.description}}</p>
       </section>
       <section id="bottom-section">
+        <!-- Shipping Section -->
         <h5>SHIPPING</h5>
         <p>Take advantage of our exclusive offer for dog lovers! Enjoy free
           standard shipping on your entire order with any purchase of dog
@@ -36,4 +46,5 @@
     </div>
   </div>
 </section>
+
 <script src='/js/quantitybtn.js'></script>
