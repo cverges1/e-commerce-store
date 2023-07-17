@@ -45,7 +45,6 @@ router.post("/", async (req, res) => {
         firstName: req.body.first_name,
         lastName: req.body.last_name,
         email: req.body.email,
-        password: req.body.password,
         address: req.body.shipping_address,
       },
     });
