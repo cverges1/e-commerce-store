@@ -2,9 +2,10 @@
   ## Licensing: MIT [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
-  Our website is designed for people who love to shop online for pet supplies for their domestic pets. Customers can choose products by category, on sale status, or new arrival status. Customers are able to create an account and have the option to login and logout. Customers are also able to add or subtract items from their shopping cart.
+Welcome to our premier online store dedicated to fulfilling all your dog's needs. We understand the importance of finding the perfect supplies for your canine companion, and our website is designed to provide a convenient and high-quality shopping experience.
   
-  Elevator Pitch: Does your pet need a new bed or a new toy? Do you want to save time by ordering everything you need for your furry friend from the comfort of home? Well look no further because this website was designed specifically for that! Users are provided categories to help guide them in the right direction. Users can also see items that are on sale, with user-friendly navigation.
+  Elevator Pitch:
+Is your furry best friend in need of a new dog bed or some engaging toys? Are you tired of spending hours searching for the right supplies? Look no further! Our website is specifically designed to cater to dog owners like you, providing a seamless online shopping experience. With a wide variety of categories and irresistible deals, you can find everything your four-legged friend needs right from the comfort of your home.
 
   ## Table of Contents
   
@@ -25,16 +26,30 @@
   - Heroku URL: 
 
   ## Usage
-  Users will only need a machine with connection to the internet and a list of supplies they might need for their furry friend.
+To explore and select products from the e-commerce store, follow these steps:
+
+1. Access the store using a device with an internet connection.
+2. On the homepage, you will find sections displaying "On Sale" and "New Arrivals." Click on the products in these sections to view their details.
+3. If you have a specific category in mind, navigate to the "Categories" section on the homepage.
+   - Click on the "Food" category to view available food products.
+   - Click on the "Leashes" category to explore different leash options.
+   - Click on the "Beds" category to browse through various pet beds.
+   - Click on the "Toys" category to discover a range of entertaining toys for your furry friend.
+4. Review the product information, including descriptions, images, and pricing.
+5. Once you have decided on a product, click on it to view more details.
+6. To make a purchase, note down the desired product(s) and visit a physical store or use alternative purchasing methods.
+
+Please note that the current version of the e-commerce store does not include a functional "Add to Cart" feature. The purpose of the store is to showcase the available products and provide information to users.
 
   ## Tech used
 * JavaScript
-* Node.JS
+* Node.js
+* Express.js
 * Google Analytics
 * HTML
 * CSS
-* Handlebars
-* SQL
+* Handlebars.js
+* MySQL
 
 ## Credits
 Collaborators:
